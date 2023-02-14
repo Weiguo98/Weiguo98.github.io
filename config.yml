@@ -44,7 +44,6 @@ languages:
         languageName: "Profile"
         # languageAltTitle: Chinese
         weight: 2
-        title: Mole's Home
         # taxonomies:
         #   category: FRcategories
         #   tag: FRtags
@@ -52,7 +51,7 @@ languages:
         profileMode:
             enabled: true
             title: Happy Birthday!
-            imageUrl: "HBD"
+            imageUrl: "https://github.com/Weiguo98/Weiguo98.github.io/blob/main/HBD.jpg"
             imageTitle: ProfileMode image
             imageWidth: 300
             imageHeight: 300
@@ -94,7 +93,7 @@ params:
     # author: ["Me", "You"] # multiple authors
     defaultTheme: auto
     # disableThemeToggle: true
-    ShowShareButtons: true
+    # ShowShareButtons: true
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
@@ -109,8 +108,9 @@ params:
     profileMode:
         enabled: false
         title: Happy Birthday!
-        imageUrl: "./HBD.jpg"
-        imageTitle: my image
+        imageUrl: "https://github.com/Weiguo98/Weiguo98.github.io/raw/main/HBD.svg"
+
+        # imageTitle: my image
         # imageWidth: 120
         # imageHeight: 120
         buttons:
@@ -182,26 +182,26 @@ markup:
         # lineNos: true
         # style: monokai
 
-privacy:
-    vimeo:
-        disabled: false
-        simple: true
+# privacy:
+#     vimeo:
+#         disabled: false
+#         simple: true
 
-    twitter:
-        disabled: false
-        enableDNT: true
-        simple: true
+#     twitter:
+#         disabled: false
+#         enableDNT: true
+#         simple: true
 
-    instagram:
-        disabled: false
-        simple: true
+#     instagram:
+#         disabled: false
+#         simple: true
 
-    youtube:
-        disabled: false
-        privacyEnhanced: true
+#     youtube:
+#         disabled: false
+#         privacyEnhanced: true
 
-services:
-    instagram:
-        disableInlineCSS: true
-    twitter:
-        disableInlineCSS: true
+# services:
+#     instagram:
+#         disableInlineCSS: true
+#     twitter:
+#         disableInlineCSS: true
