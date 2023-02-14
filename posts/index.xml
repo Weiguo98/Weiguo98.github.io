@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Mole&#39;s Home</title>
+    <title>Posts on Wei&#39;s Home</title>
     <link>http://weiguo98.github.io/posts/</link>
-    <description>Recent content in Posts on Mole&#39;s Home</description>
-    <image>
-      <url>http://weiguo98.github.io/papermod-cover.png</url>
-      <link>http://weiguo98.github.io/papermod-cover.png</link>
-    </image>
+    <description>Recent content in Posts on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 25 Jan 2023 23:18:18 +0100</lastBuildDate><atom:link href="http://weiguo98.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>乱语</title>
       <link>http://weiguo98.github.io/posts/my-first-post/</link>
       <pubDate>Wed, 25 Jan 2023 23:18:18 +0100</pubDate>
       
       <guid>http://weiguo98.github.io/posts/my-first-post/</guid>
-      <description>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!</description>
+      <description>那到底爱是什么
+你笑的时候
+全世界的光都融化
+&amp;ndash; 叶青</description>
     </item>
     
   </channel>
