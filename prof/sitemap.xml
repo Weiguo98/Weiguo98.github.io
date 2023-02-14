@@ -14,18 +14,6 @@
                 href="http://weiguo98.github.io/prof/categories/"
                 />
   </url><url>
-    <loc>http://weiguo98.github.io/prof/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://weiguo98.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="prof"
-                href="http://weiguo98.github.io/prof/"
-                />
-  </url><url>
     <loc>http://weiguo98.github.io/prof/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,6 +24,18 @@
                 rel="alternate"
                 hreflang="prof"
                 href="http://weiguo98.github.io/prof/tags/"
+                />
+  </url><url>
+    <loc>http://weiguo98.github.io/prof/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://weiguo98.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="prof"
+                href="http://weiguo98.github.io/prof/"
                 />
   </url>
 </urlset>
