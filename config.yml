@@ -1,5 +1,5 @@
 baseURL: 'http://weiguo98.github.io'
-title: Mole's Home
+title: Wei's Home
 paginate: 5
 theme: PaperMod
 
@@ -40,28 +40,29 @@ languages:
                 # - name: Discord
                 #   url: https://discord.gg/ahpmTvhVmp
 
-    cn:
+    prof:
         languageName: "Profile"
         # languageAltTitle: Chinese
         weight: 2
         title: Mole's Home
-        taxonomies:
-          category: FRcategories
-          tag: FRtags
-          series: FRseries
+        # taxonomies:
+        #   category: FRcategories
+        #   tag: FRtags
+        #   series: FRseries
         profileMode:
             enabled: true
-            title: PaperMod
-            imageUrl: "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg"
+            title: Happy Birthday!
+            imageUrl: "HBD"
             imageTitle: ProfileMode image
             imageWidth: 300
             imageHeight: 300
-            subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+            subtitle: "祝小江25岁生日快乐! 新的一岁平平安安，万事如意。"
+            # "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
             buttons:
                 - name: Blog
-                  url: posts
-                - name: Profile Mode
-                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+                  url: ../posts
+                - name: Donate
+                  url: https://www.gofundme.com/f/help-wei-with-a-couple-of-coffee?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1
         # menu:
         #     main:
         #         - name: Archive
@@ -91,7 +92,6 @@ params:
     # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
     author: Wei
     # author: ["Me", "You"] # multiple authors
-
     defaultTheme: auto
     # disableThemeToggle: true
     ShowShareButtons: true
@@ -104,12 +104,12 @@ params:
     ShowRssButtonInSectionTermList: true
     # ShowToc: true
     comments: true
-    images: ["papermod-cover.png"]
+    # images: ["papermod-cover.png"]
 
     profileMode:
         enabled: false
-        title: PaperMod
-        imageUrl: "#"
+        title: Happy Birthday!
+        imageUrl: "./HBD.jpg"
         imageTitle: my image
         # imageWidth: 120
         # imageHeight: 120
@@ -120,19 +120,20 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "PaperMod"
+        Title: "Happy Birthday"
         Content: >
-            Welcome to demo of hugo's theme PaperMod.
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-            - Do give a 🌟 on Github !
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
-    socialIcons:
-        - name: github
-          url: "https://github.com/adityatelange/hugo-PaperMod"
-        - name: KoFi
-          url: "https://ko-fi.com/adityatelange"
-        - name: Rss
-          url: "index.xml"
+            祝小江25岁生日快乐，新的一年万事如意，一切顺利！
+          # Welcome to demo of hugo's theme PaperMod.
+          # - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+          # - Do give a 🌟 on Github !
+          # - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+    # socialIcons:
+    #     - name: github
+    #       url: "https://github.com/adityatelange/hugo-PaperMod"
+    #     - name: KoFi
+    #       url: "https://ko-fi.com/adityatelange"
+    #     - name: Rss
+    #       url: "index.xml"
 
     # editPost:
     #     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"

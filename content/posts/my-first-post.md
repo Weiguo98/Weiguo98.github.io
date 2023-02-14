@@ -1,12 +1,19 @@
 ---
-title: "My First Post"
+title: "乱语"
 date: 2023-01-25T23:18:18+01:00
 # draft: true
 ---
 
-## Introduction
+那到底爱是什么
 
-This is **bold** text, and this is *emphasized* text.
+你笑的时候
 
-Visit the [Hugo](https://gohugo.io) website!
+全世界的光都融化
+
+-- 叶青
+<!-- ## Introduction -->
+
+<!-- This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website! -->
 
