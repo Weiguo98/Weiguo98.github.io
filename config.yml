@@ -51,8 +51,8 @@ languages:
         profileMode:
             enabled: true
             title: Happy Birthday!
-            imageUrl: "https://github.com/Weiguo98/Weiguo98.github.io/blob/main/HBD.jpg"
-            imageTitle: ProfileMode image
+            imageUrl: "./Happy.svg"
+            # imageTitle: ProfileMode image
             imageWidth: 300
             imageHeight: 300
             subtitle: "祝小江25岁生日快乐! 新的一岁平平安安，万事如意。"
@@ -108,7 +108,7 @@ params:
     profileMode:
         enabled: false
         title: Happy Birthday!
-        imageUrl: "https://github.com/Weiguo98/Weiguo98.github.io/raw/main/HBD.svg"
+        imageUrl: "Happy.svg"
 
         # imageTitle: my image
         # imageWidth: 120
