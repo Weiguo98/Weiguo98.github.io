@@ -51,7 +51,7 @@ languages:
         profileMode:
             enabled: true
             title: Happy Birthday!
-            imageUrl: "./Happy.svg"
+            imageUrl: "https://raw.githubusercontent.com/Weiguo98/Weiguo98.github.io/main/Happy.svg"
             # imageTitle: ProfileMode image
             imageWidth: 300
             imageHeight: 300
