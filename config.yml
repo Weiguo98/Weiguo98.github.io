@@ -26,12 +26,12 @@ languages:
           series: series
         menu:
             main:
-                - name: Archive
-                  url: archives/
+                - name: Posts
+                  url: posts/
                   weight: 5
-                - name: Search
-                  url: search/
-                  weight: 10
+                # - name: Search
+                #   url: search/
+                #   weight: 10
                 - name: Tags
                   url: tags/
                   weight: 10
@@ -50,16 +50,17 @@ languages:
         #   series: FRseries
         profileMode:
             enabled: true
-            title: Happy Birthday!
-            imageUrl: "https://raw.githubusercontent.com/Weiguo98/Weiguo98.github.io/main/Happy.svg"
+            title: Wei Guo
+            imageUrl: "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg"
             # imageTitle: ProfileMode image
             imageWidth: 300
             imageHeight: 300
-            subtitle: "祝小江25岁生日快乐! 新的一岁平平安安，万事如意。"
-            # "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+            subtitle:  "☄️ Ambitious | ☁️ Perfectism | 🌙 Collaborative"
             buttons:
-                - name: Blog
-                  url: ../posts
+                - name: LinkedIn
+                  url: https://www.linkedin.com/in/wei-guo-a649801b7/
+                - name: Github
+                  url: https://github.com/Weiguo98
                 - name: Donate
                   url: https://www.gofundme.com/f/help-wei-with-a-couple-of-coffee?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1
         # menu:
@@ -120,13 +121,14 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "Happy Birthday"
+        Title: "Welcome :)"
         Content: >
-            祝小江25岁生日快乐，新的一年万事如意，一切顺利！
-          # Welcome to demo of hugo's theme PaperMod.
-          # - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-          # - Do give a 🌟 on Github !
-          # - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+          - I am a writer. A software designer.
+
+          - A humanist and a woman too.
+
+          - But above all, a programmer. Thank you.
+
     # socialIcons:
     #     - name: github
     #       url: "https://github.com/adityatelange/hugo-PaperMod"
