@@ -7,15 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 25 Jan 2023 23:18:18 +0100</lastBuildDate><atom:link href="http://weiguo98.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>乱语</title>
+      <title>Kubernetes probes and pod lifecycle</title>
       <link>http://weiguo98.github.io/posts/my-first-post/</link>
       <pubDate>Wed, 25 Jan 2023 23:18:18 +0100</pubDate>
       
       <guid>http://weiguo98.github.io/posts/my-first-post/</guid>
-      <description>那到底爱是什么
-你笑的时候
-全世界的光都融化
-&amp;ndash; 叶青</description>
+      <description>Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs. The kubelet uses readiness probes to know when a container is ready to start accepting traffic.</description>
     </item>
     
   </channel>
