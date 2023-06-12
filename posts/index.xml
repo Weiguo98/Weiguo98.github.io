@@ -5,7 +5,17 @@
     <link>http://weiguo98.github.io/posts/</link>
     <description>Recent content in Posts on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jan 2023 23:18:18 +0100</lastBuildDate><atom:link href="http://weiguo98.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 25 May 2023 22:10:18 +0100</lastBuildDate><atom:link href="http://weiguo98.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to pass data in JSON format in config map to the microservice</title>
+      <link>http://weiguo98.github.io/posts/pass-data-in-json/</link>
+      <pubDate>Thu, 25 May 2023 22:10:18 +0100</pubDate>
+      
+      <guid>http://weiguo98.github.io/posts/pass-data-in-json/</guid>
+      <description>When we have little data need to pass from helm chart to service, it quit easy to use the container.env part in the deployment.yaml. So that we could just os.getEnv() in the code, we got the value we want. But what if we have a lot of values to pass, it is a mess to add them all in the helm chart. Then, we could use config map here. Personally, I prefer to use the JSON format, because it is easy to un-marshal to struct, and we can get easy access to all the values.</description>
+    </item>
+    
     <item>
       <title>Kubernetes probes and pod lifecycle</title>
       <link>http://weiguo98.github.io/posts/my-first-post/</link>
