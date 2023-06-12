@@ -40,19 +40,14 @@ languages:
                 # - name: Discord
                 #   url: https://discord.gg/ahpmTvhVmp
 
-    prof:
+    params:
         languageName: "Profile"
         # languageAltTitle: Chinese
         weight: 2
-        # taxonomies:
-        #   category: FRcategories
-        #   tag: FRtags
-        #   series: FRseries
         profileMode:
             enabled: true
             title: Wei Guo
             imageUrl: "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg"
-            # imageTitle: ProfileMode image
             imageWidth: 300
             imageHeight: 300
             subtitle:  "☄️ Ambitious | ☁️ Perfectism | 🌙 Collaborative"
