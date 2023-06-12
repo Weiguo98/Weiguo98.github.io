@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>http://weiguo98.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://weiguo98.github.io/</loc>
-  </url>
-  
-  <url>
-    <loc>http://weiguo98.github.io/tags/</loc>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>http://weiguo98.github.io/en/sitemap.xml</loc>
+		
+	   	<lastmod>2023-05-25T22:10:18+01:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://weiguo98.github.io/fr/sitemap.xml</loc>
+		
+	</sitemap>
+	
+</sitemapindex>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://weiguo98.github.io/sitemap.xml
