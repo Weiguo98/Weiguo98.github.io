@@ -40,7 +40,7 @@ languages:
                 # - name: Discord
                 #   url: https://discord.gg/ahpmTvhVmp
 
-    params:
+    fr:
         languageName: "Profile"
         # languageAltTitle: Chinese
         weight: 2
