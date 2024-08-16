@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Wei&#39;s Home</title>
+    <link>http://localhost:1313/docs/</link>
+    <description>Recent content in Docs on Wei&#39;s Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
+    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
+    <copyright>© 2024 Wei Guo</copyright>
+    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible complex set up error handling</title>
+      <link>http://localhost:1313/docs/ansible-ignore-errors/ansible-ignore-errors/</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <author>guow1227@gmail.com (Wei Guo)</author>
+      <guid>http://localhost:1313/docs/ansible-ignore-errors/ansible-ignore-errors/</guid>
+      <description>Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.
+Problem Description # ignore_errors=true is ineffective in Ansible roles, only working within sessions.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to pass data in JSON format in config map to the microservice</title>
+      <link>http://localhost:1313/docs/pass-data-in-json/pass-data-in-json/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      <author>guow1227@gmail.com (Wei Guo)</author>
+      <guid>http://localhost:1313/docs/pass-data-in-json/pass-data-in-json/</guid>
+      <description>When we have little data need to pass from helm chart to service, it quit easy to use the container.env part in the deployment.yaml. So that we could just os.</description>
+      
+    </item>
+    
+    <item>
+      <title>What to prepare when got a job in Sweden</title>
+      <link>http://localhost:1313/docs/move-to-sweden/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <author>guow1227@gmail.com (Wei Guo)</author>
+      <guid>http://localhost:1313/docs/move-to-sweden/</guid>
+      <description>Before landed in Sweden: passport and work permit check the work permit progress. immigration agency, you can also get more information about what kind of documenation is needed, and read</description>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes probes and pod lifecycle</title>
+      <link>http://localhost:1313/docs/my-first-post/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      <author>guow1227@gmail.com (Wei Guo)</author>
+      <guid>http://localhost:1313/docs/my-first-post/</guid>
+      <description>Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Wei&#39;s Home</title>
+    <link>http://localhost:1313/authors/</link>
+    <description>Recent content in Authors on Wei&#39;s Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
+    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
+    <copyright>© 2024 Wei Guo</copyright>
+    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

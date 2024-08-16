@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible on Blowfish</title>
+    <link>http://localhost:1313/zh-cn/tags/ansible/</link>
+    <description>Recent content in Ansible on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible complex set up error handling</title>
+      <link>http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</guid>
+      <description>在使用Ansible进行环境配置时，处理错误是一个关键问题，</description>
+      
+    </item>
+    
+  </channel>
+</rss>
