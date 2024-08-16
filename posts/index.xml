@@ -1,28 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Wei&#39;s Home</title>
-    <link>http://weiguo98.github.io/posts/</link>
-    <description>Recent content in Posts on Wei&#39;s Home</description>
+    <title>Posts on Blowfish</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Aug 2024 16:26:00 +0100</lastBuildDate><atom:link href="http://weiguo98.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>nuno@n9o.xyz (Blowfish)</managingEditor>
+    <webMaster>nuno@n9o.xyz (Blowfish)</webMaster>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Fri, 16 Aug 2024 14:26:43 +0200</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible</title>
+      <link>http://localhost:1313/posts/ansible/</link>
+      <pubDate>Fri, 16 Aug 2024 14:26:43 +0200</pubDate>
+      <author>nuno@n9o.xyz (Blowfish)</author>
+      <guid>http://localhost:1313/posts/ansible/</guid>
+      <description>// 中文版在下面（Chinese version down below） Handling errors during environment configuration with Ansible</description>
+      
+    </item>
+    
+    <item>
+      <title>Ansible complex set up error handling</title>
+      <link>http://localhost:1313/posts/ansible-ignore-errors/</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <author>nuno@n9o.xyz (Blowfish)</author>
+      <guid>http://localhost:1313/posts/ansible-ignore-errors/</guid>
+      <description>// 中文版在下面（Chinese version down below） Handling errors during environment configuration with Ansible</description>
+      
+    </item>
+    
     <item>
       <title>How to pass data in JSON format in config map to the microservice</title>
-      <link>http://weiguo98.github.io/posts/pass-data-in-json/</link>
-      <pubDate>Thu, 25 May 2023 22:10:18 +0100</pubDate>
+      <link>http://localhost:1313/posts/pass-data-in-json/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      <author>nuno@n9o.xyz (Blowfish)</author>
+      <guid>http://localhost:1313/posts/pass-data-in-json/</guid>
+      <description>When we have little data need to pass from helm chart to service, it quit easy to use the container.env part in the deployment.yaml. So that we could just os.</description>
       
-      <guid>http://weiguo98.github.io/posts/pass-data-in-json/</guid>
-      <description>When we have little data need to pass from helm chart to service, it quit easy to use the container.env part in the deployment.yaml. So that we could just os.getEnv() in the code, we got the value we want. But what if we have a lot of values to pass, it is a mess to add them all in the helm chart. Then, we could use config map here. Personally, I prefer to use the JSON format, because it is easy to un-marshal to struct, and we can get easy access to all the values.</description>
+    </item>
+    
+    <item>
+      <title>What to prepare when got a job in Sweden</title>
+      <link>http://localhost:1313/posts/move-to-sweden/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <author>nuno@n9o.xyz (Blowfish)</author>
+      <guid>http://localhost:1313/posts/move-to-sweden/</guid>
+      <description>Before landed in Sweden: passport and work permit check the work permit progress. immigration agency, you can also get more information about what kind of documenation is needed, and read</description>
+      
     </item>
     
     <item>
       <title>Kubernetes probes and pod lifecycle</title>
-      <link>http://weiguo98.github.io/posts/my-first-post/</link>
-      <pubDate>Wed, 25 Jan 2023 23:18:18 +0100</pubDate>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      <author>nuno@n9o.xyz (Blowfish)</author>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.</description>
       
-      <guid>http://weiguo98.github.io/posts/my-first-post/</guid>
-      <description>Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs. The kubelet uses readiness probes to know when a container is ready to start accepting traffic.</description>
     </item>
     
   </channel>

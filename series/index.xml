@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Series on Wei&#39;s Home</title>
-    <link>http://weiguo98.github.io/series/</link>
-    <description>Recent content in Series on Wei&#39;s Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://weiguo98.github.io/series/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Series on Wei's Home</title><link>https://localhost:1313/series/</link><description>Recent content in Series on Wei's Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor><webMaster>guow1227@gmail.com (Wei Guo)</webMaster><copyright>© 2024 Wei Guo</copyright><atom:link href="https://localhost:1313/series/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
