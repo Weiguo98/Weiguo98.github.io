@@ -1,7 +1,7 @@
 languageCode = "zh-cn"
 languageName = "简体中文"
 weight = 4
-title = "Blowfish"
+title = "Wei的博客"
 
 [params]
   displayName = "简体中文"
@@ -12,11 +12,11 @@ title = "Blowfish"
   description = "一个强大、轻量级的 Hugo 主题。"
 
 [author]
-  name = "Blowfish"
+  name = "郭巍"
   image = "img/blowfish_logo.png"
-  headline = "一个强大、轻量级的 Hugo 主题。"
-  bio = "一个强大、轻量级的 Hugo 主题。"
+  headline = "国家一级睡觉艺术家"
+  bio = "国家一级睡觉艺术家"
   links = [
-    { x-twitter = "https://twitter.com/burufugu" },
-    { github = "https://github.com/nunocoracao/blowfish" },
+    { github = "https://github.com/Weiguo98" },
+    { linkedin = "https://www.linkedin.com/in/wei-guo-a649801b7/" },
   ]

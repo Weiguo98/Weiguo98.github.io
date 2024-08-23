@@ -12,56 +12,56 @@
 
 [[main]]
   name = "文档"
-  pageRef = "docs"
+  pageRef = "blog"
   weight = 10
 
-[[main]]
-  name = "简码"
-  pageRef = "docs/shortcodes"
-  weight = 15
+# [[main]]
+#   name = "简码"
+#   pageRef = "docs/shortcodes"
+#   weight = 15
 
-[[main]]
-  name = "示例"
-  weight = 20
+# [[main]]
+#   name = "示例"
+#   weight = 20
 
-[[main]]
-  name = "功能示例"
-  parent = "示例"
-  pageRef = "samples"
-  weight = 16
+# [[main]]
+#   name = "功能示例"
+#   parent = "示例"
+#   pageRef = "samples"
+#   weight = 16
 
-[[main]]
-  name = "模板示例"
-  parent = "示例"
-  pageRef = "examples"
-  weight = 30
+# [[main]]
+#   name = "模板示例"
+#   parent = "示例"
+#   pageRef = "examples"
+#   weight = 30
 
-[[main]]
-  name = "部署指南"
-  parent = "示例"
-  pageRef = "guides"
-  weight = 40
+# [[main]]
+#   name = "部署指南"
+#   parent = "示例"
+#   pageRef = "guides"
+#   weight = 40
 
-[[main]]
-  name = "用户列表"
-  pageRef = "users"
-  weight = 90
+# [[main]]
+#   name = "用户列表"
+#   pageRef = "users"
+#   weight = 90
 
-[[main]]
-  name = "周边"
-  url = "https://www.teepublic.com/user/blowfish-store/t-shirts"
-  weight = 100
+# [[main]]
+#   name = "周边"
+#   url = "https://www.teepublic.com/user/blowfish-store/t-shirts"
+#   weight = 100
 
 #[[main]]
 #  name = "Test"
 #  pageRef = "pagTest"
 #  weight = 1000
 
-[[main]]
-  identifier = "twitter"
-  pre = "x-twitter"
-  url = "https://twitter.com/burufugu"
-  weight = 200
+# [[main]]
+#   identifier = "twitter"
+#   pre = "x-twitter"
+#   url = "https://twitter.com/burufugu"
+#   weight = 200
 
 #[[main]]
 #  identifier = "mastodon"
@@ -75,14 +75,26 @@
   url = "https://github.com/nunocoracao/blowfish"
   weight = 400
 
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  url = "https://github.com/nunocoracao/blowfish"
+  weight = 400
+
+ [[main]]
+   name = "标签"
+   pageRef = "tags"
+   weight = 10
+
+
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
  [[footer]]
-   name = "标签"
-   pageRef = "tags"
+   name = "赞助"
+   url = "https://www.buymeacoffee.com/nunocoracao"
    weight = 10
 
  [[footer]]

@@ -2,6 +2,7 @@
 title: "Kubernetes probes and pod lifecycle"
 date: "2023-01-25"
 # draft: true
+tags: ["kubernetes"]
 ---
 
 - Readiness and Liveness probe
