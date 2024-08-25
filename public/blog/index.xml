@@ -17,7 +17,7 @@
       <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</guid>
       <description>Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.
-Problem Description # ignore_errors=true is ineffective in Ansible roles, only working within sessions.</description>
+Problem Description #ignore_errors=true is ineffective in Ansible roles, only working within sessions.</description>
       
     </item>
     
