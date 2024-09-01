@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
-  <meta http-equiv="content-language" content="zh-cn" />
+  <meta http-equiv="content-language" content="en" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Ansible complex set up error handling &middot; Wei的博客</title>
-  <meta name="title" content="Ansible complex set up error handling &middot; Wei的博客" />
+  <title>Kubernetes probes and pod lifecycle &middot; Wei&#39;s Home</title>
+  <meta name="title" content="Kubernetes probes and pod lifecycle &middot; Wei&#39;s Home" />
   
-  <meta name="description" content="一个强大、轻量级的 Hugo 主题。" />
-  <meta name="keywords" content="ansible, " />
+  <meta name="description" content="A powerful, lightweight theme for Hugo." />
+  <meta name="keywords" content="kubernetes, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/" />
+  <link rel="canonical" href="http://localhost:1313/blog/kubernetes-pods-lifecycle/" />
   
   
   
@@ -64,21 +64,21 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/">
-  <meta property="og:site_name" content="Wei的博客">
-  <meta property="og:title" content="Ansible complex set up error handling">
-  <meta property="og:description" content="在使用Ansible进行环境配置时，处理错误是一个关键问题，">
-  <meta property="og:locale" content="zh_cn">
+  <meta property="og:url" content="http://localhost:1313/blog/kubernetes-pods-lifecycle/">
+  <meta property="og:site_name" content="Wei&#39;s Home">
+  <meta property="og:title" content="Kubernetes probes and pod lifecycle">
+  <meta property="og:description" content="Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-08-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-08-14T00:00:00+00:00">
-    <meta property="article:tag" content="Ansible">
+    <meta property="article:published_time" content="2023-01-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-01-25T00:00:00+00:00">
+    <meta property="article:tag" content="Kubernetes">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ansible complex set up error handling">
-  <meta name="twitter:description" content="在使用Ansible进行环境配置时，处理错误是一个关键问题，">
+  <meta name="twitter:title" content="Kubernetes probes and pod lifecycle">
+  <meta name="twitter:description" content="Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.">
 
   
   <script type="application/ld+json">
@@ -86,33 +86,33 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blogs",
-    "name": "Ansible complex set up error handling",
-    "headline": "Ansible complex set up error handling",
+    "name": "Kubernetes probes and pod lifecycle",
+    "headline": "Kubernetes probes and pod lifecycle",
     
-    "abstract": "在使用Ansible进行环境配置时，处理错误是一个关键问题，",
-    "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/zh-cn\/blog\/ansible-ignore-errors\/ansible-ignore-errors\/",
+    "abstract": "Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/blog\/kubernetes-pods-lifecycle\/",
     "author" : {
       "@type": "Person",
-      "name": "郭巍"
+      "name": "Wei Guo"
     },
-    "copyrightYear": "2024",
-    "dateCreated": "2024-08-14T00:00:00\u002b00:00",
-    "datePublished": "2024-08-14T00:00:00\u002b00:00",
+    "copyrightYear": "2023",
+    "dateCreated": "2023-01-25T00:00:00\u002b00:00",
+    "datePublished": "2023-01-25T00:00:00\u002b00:00",
     
-    "dateModified": "2024-08-14T00:00:00\u002b00:00",
+    "dateModified": "2023-01-25T00:00:00\u002b00:00",
     
-    "keywords": ["ansible"],
+    "keywords": ["kubernetes"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "987"
+    "wordCount": "380"
   }]
   </script>
 
 
   
   
-  <meta name="author" content="郭巍" />
+  <meta name="author" content="Wei Guo" />
   
   
   
@@ -173,7 +173,7 @@
   <div id="the-top" class="absolute flex self-center">
     <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
       href="#main-content"><span
-        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
   </div>
   
   
@@ -187,12 +187,12 @@
     
     
     <div>
-        <a href="/zh-cn/" class="flex">
-            <span class="sr-only">Wei的博客</span>
+        <a href="/" class="flex">
+            <span class="sr-only">Wei&rsquo;s Home</span>
 
             
             <img src="/img/blowfish_logo_transparent.png" width="1000" height="1000"
-                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Wei的博客" />
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Wei&#39;s Home" />
             
 
         </a>
@@ -202,7 +202,7 @@
         <nav class="flex space-x-3">
 
             
-            <a href="/zh-cn/" class="text-base font-medium text-gray-500 hover:text-gray-900">Wei的博客</a>
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Wei&rsquo;s Home</a>
             
 
         </nav>
@@ -211,10 +211,10 @@
             
             
             
-  <a href="/zh-cn/blog/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  <a href="/blog/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
     <p class="text-base font-medium" title="">
-        文档
+        Blog
     </p>
 </a>
 
@@ -222,10 +222,10 @@
 
             
             
-  <a href="/zh-cn/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
     <p class="text-base font-medium" title="">
-        标签
+        Tags
     </p>
 </a>
 
@@ -279,41 +279,6 @@
             
 
             
-<div>
-  <div class="cursor-pointer flex items-center nested-menu">
-    <span class="mr-1">
-      
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg>
-  </span>
-
-
-    </span>
-    <div class="text-sm font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">简体中文</div>
-  </div>
-  <div class="absolute menuhide">
-    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
-      <div class="flex flex-col space-y-3">
-        
-        <a href="/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
-            English
-          </p>
-        </a>
-        
-        <a href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
-            简体中文
-          </p>
-        </a>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
             
@@ -366,41 +331,6 @@
             <span></span>
 
             
-<div>
-  <div class="cursor-pointer flex items-center nested-menu">
-    <span class="mr-1">
-      
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg>
-  </span>
-
-
-    </span>
-    <div class="text-sm font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">简体中文</div>
-  </div>
-  <div class="absolute menuhide">
-    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
-      <div class="flex flex-col space-y-3">
-        
-        <a href="/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
-            English
-          </p>
-        </a>
-        
-        <a href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
-            简体中文
-          </p>
-        </a>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
             
@@ -481,10 +411,10 @@
 
                     
   <li class="mt-1">
-    <a href="/zh-cn/blog/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    <a href="/blog/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-bg font-bg" title="">
-            文档
+            Blog
         </p>
     </a>
 </li>
@@ -496,10 +426,10 @@
 
                     
   <li class="mt-1">
-    <a href="/zh-cn/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-bg font-bg" title="">
-            标签
+            Tags
         </p>
     </a>
 </li>
@@ -656,8 +586,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/zh-cn/"
-      >Wei的博客</a
+      href="/"
+      >Wei&#39;s Home</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -665,7 +595,7 @@
   <li class="inline ">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/zh-cn/blog/"
+      href="/blog/"
       >Blogs</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
@@ -674,8 +604,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/"
-      >Ansible complex set up error handling</a
+      href="/blog/kubernetes-pods-lifecycle/"
+      >Kubernetes probes and pod lifecycle</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -684,7 +614,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Ansible complex set up error handling
+      Kubernetes probes and pod lifecycle
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -729,7 +659,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -739,11 +669,11 @@
 
 <span class="mb-[2px]">
   <a
-    href="https://github.com/Weiguo98/Weiguo98.github.io/tree/main/content/blog/ansible-ignore-errors/ansible-ignore-errors.zh-cn.md"
+    href="https://github.com/Weiguo98/Weiguo98.github.io/tree/main/content/blog/kubernetes-pods-lifecycle.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
-    title="编辑内容"
+    title="Edit content"
     ><span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -811,10 +741,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/zh-cn/tags/ansible/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/kubernetes/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Ansible
+    Kubernetes
   </span>
 </span>
   </span>
@@ -852,20 +782,20 @@
         
       
       <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
-      alt="郭巍" src="/img/blowfish_logo_hu10440971084165979012.png" />
+      alt="Wei Guo" src="/img/blowfish_logo_hu10440971084165979012.png" />
     
   
   <div class="place-self-center">
     
     <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
-      作者
+      Author
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      郭巍
+      Wei Guo
     </div>
     
     
-    <div class="text-sm text-neutral-700 dark:text-neutral-400">国家一级睡觉艺术家</div>
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">Debugging Life One Line at a Time.</div>
     
     <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
@@ -926,127 +856,7 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-     <div
-      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
-      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
-
-         <details open id="TOCView"
-  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
-  <summary
-    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#问题描述">问题描述</a></li>
-        <li><a href="#详细说明">详细说明</a>
-          <ul>
-            <li><a href="#参考资料">参考资料</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
-<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
-  <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#问题描述">问题描述</a></li>
-        <li><a href="#详细说明">详细说明</a>
-          <ul>
-            <li><a href="#参考资料">参考资料</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
-
-<script>
-
-  var margin = 200;
-  var marginError = 50;
-
-  (function () {
-    var $window = $(window);
-    var $toc = $('#TOCView');
-    var tocHeight = $toc.height();
-
-    function onResize() {
-      var windowAndMarginHeight = $window.height() - margin;
-      if(tocHeight >= windowAndMarginHeight) {
-        $toc.css("overflow-y", "scroll")
-        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
-      } else {
-        $toc.css("overflow-y", "hidden")
-        $toc.css("max-height", "9999999px")
-      }
-    }
-
-    $window.on('resize', onResize);
-    $(document).ready(onResize);
-  })();
-
-
-
-  (function () {
-    var $toc = $('#TableOfContents');
-    if ($toc.length > 0) {
-      var $window = $(window);
-
-      function onScroll() {
-        var currentScroll = $window.scrollTop();
-        var h = $('.anchor');
-        var id = "";
-        h.each(function (i, e) {
-          e = $(e);
-          if (e.offset().top - $(window).height()/3 <= currentScroll) {
-            id = decodeURIComponent(e.attr('id'));
-          }
-        });
-        var active = $toc.find('a.active');      
-        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
-
-        active.each(function (i, e) {
-          
-            $(e).removeClass('active');
-          
-        });
-        $toc.find('a[href="#' + id + '"]').addClass('active')
-        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
-          $(e).children('a').parents('ul').show();          
-        });
-      }
-
-      $window.on('scroll', onScroll);
-      $(document).ready(function () {
-        
-        onScroll();
-      });
-    }
-  })();
-
-
-</script>
-   </div>
-      </div>
-      
+    
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -1054,72 +864,53 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>在使用Ansible进行环境配置时，处理错误是一个关键问题，尽管有<code>ignore_errors</code>和<code>fails_when</code>两个keyword支持，但他们只能应用在具体的task，不能应用在role/整个playbook上。本文将介绍如何在复杂设置中如何更好的处理错误，特别是对于应用ansible在测试的情况下。</p>
-
-
-<h3 class="relative group">问题描述 
-    <div id="%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>ignore_errors=true在Ansible角色中不起作用，只在会话中有效。需要在测试任务和后续任务中多次添加此选项，以确保如果测试或者仅仅是不能够获取日志，下一个测试仍然可以运行。那如何更好的处理这种情况避免滥用<code>ignore_errors</code> 以及如果某个测试的预处理任务失败了，该测试可以被跳过，而不是被执行？</p>
-<p>解决方案是，可以重构测试用例，使用<code>block</code>、<code>rescue</code>、<code>always</code>和<code>clear_host_errors</code>。
-以下是一个可以工作的示例：</p>
-<pre tabindex="0"><code class="language-ansible" data-lang="ansible">- block:
-    - name: Pre tasks
-      command: /bin/false
-    - name: Test tasks
-      command: /bin/false
-      register: result
-  rescue:
-    - name: Record error
-      ansible.builtin.debug:
-        var: result
-  always:
-    - name: Post tasks
-      command: echo &#34;post tasks&#34;
-    - name: Clear host errors
-      meta: clear_host_errors
-</code></pre>
-
-<h3 class="relative group">详细说明 
-    <div id="%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>1.使用ignore_errors
-在Ansible中，如果一个任务失败，Ansible默认会停止在该主机上执行任务。但是，你可以使用ignore_errors来忽略错误并继续执行。例如：</p>
-<pre tabindex="0"><code class="language-ansible" data-lang="ansible">- name: Attempt to Execute a Command
-  command: /some/nonexistent/command
-  ignore_errors: true # This task will fail, but the playbook will continue.
-</code></pre><p>2.使用block、rescue和always
-通过将每个角色的任务分解为多个部分，并使用block、rescue和always关键字，可以实现更细粒度的错误处理。 从上面的例子可以看到如果pre task失败了，test task不会被执行，因为他们在一个block里面。ansible task的失败会trigger ansible执行rescue block， 在这里我们可以记录错误，例子中只是使用了debug，也可以写入到verdict/任何文件中。无论block中的task执行状态如何，都会执行post task，在post task中可以加入collect logs等任务，即使失败，在always中的任务仍然会被执行。最后通过clear_host_error 将error删除，这样ansible不会停止在该主机上执行任务，下一个test block仍然会被执行。</p>
-<p>这种结构可以构建多个test在一个playbook中，并且互不影响，能够从一定程度上减少同一时间需要启动的vm的数量。</p>
-
-
-<h4 class="relative group">参考资料 
-    <div id="%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
+          <ul>
+<li>Readiness and Liveness probe
+<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#before-you-begin" target="_blank">Configure Liveness, Readiness and Startup Probes | Kubernetes</a>
 <ul>
-<li><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html" target="_blank">ansible error handling</a></li>
+<li>The <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/" target="_blank">kubelet</a> uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.</li>
+<li>The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.</li>
+<li>The readiness check will continuously run in the pod lifecycle.
+<blockquote>
+<p>As long as Liveness Probe passed, the pod status changed to <code>running</code>. If you want to connect to a pod when it is ready for traffic, it is better to check the <code>ready</code> keywords.</p>
+</blockquote>
+</li>
 </ul>
+</li>
+<li>Pod lifecycle <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/" target="_blank">Pod Lifecycle | Kubernetes</a>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Pending</code></td>
+<td>The Pod has been accepted by the Kubernetes cluster, but one or more of the containers has not been set up and made ready to run. This includes time a Pod spends waiting to be scheduled as well as the time spent downloading container images over the network.</td>
+</tr>
+<tr>
+<td><code>Running</code></td>
+<td>The Pod has been bound to a node, and all of the containers have been created. At least one container is still running, or is in the process of starting or restarting.</td>
+</tr>
+<tr>
+<td><code>Succeeded</code></td>
+<td>All containers in the Pod have terminated in success, and will not be restarted.</td>
+</tr>
+<tr>
+<td><code>Failed</code></td>
+<td>All containers in the Pod have terminated, and at least one container has terminated in failure. That is, the container either exited with non-zero status or was terminated by the system.</td>
+</tr>
+<tr>
+<td><code>Unknown</code></td>
+<td>For some reason the state of the Pod could not be obtained. This phase typically occurs due to an error in communicating with the node where the Pod should be running.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>When a Pod is being deleted, it is shown as <code>Terminating</code> by some kubectl commands. This <code>Terminating</code> status is not one of the Pod phases. A Pod is granted a term to terminate gracefully, which defaults to 30 seconds. You can use the flag <code>--force</code> to <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination-forced" target="_blank">terminate a Pod by force</a>.</p>
 
           
           
@@ -1137,9 +928,9 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;title=Ansible%20complex%20set%20up%20error%20handling"
-      title="分享到 LinkedIn"
-      aria-label="分享到 LinkedIn"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;title=Kubernetes%20probes%20and%20pod%20lifecycle"
+      title="Share on LinkedIn"
+      aria-label="Share on LinkedIn"
       >
       
 
@@ -1156,9 +947,9 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;text=Ansible%20complex%20set%20up%20error%20handling"
-      title="分享到 Twitter"
-      aria-label="分享到 Twitter"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;text=Kubernetes%20probes%20and%20pod%20lifecycle"
+      title="Tweet on Twitter"
+      aria-label="Tweet on Twitter"
       >
       
 
@@ -1174,7 +965,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://bsky.app/intent/compose?text=Ansible%20complex%20set%20up%20error%20handling&#43;http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/"
+      href="https://bsky.app/intent/compose?text=Kubernetes%20probes%20and%20pod%20lifecycle&#43;http://localhost:1313/blog/kubernetes-pods-lifecycle/"
       title="Post on Bluesky"
       aria-label="Post on Bluesky"
       >
@@ -1192,9 +983,9 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;resubmit=true&amp;title=Ansible%20complex%20set%20up%20error%20handling"
-      title="提交到 Reddit"
-      aria-label="提交到 Reddit"
+      href="https://reddit.com/submit/?url=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;resubmit=true&amp;title=Kubernetes%20probes%20and%20pod%20lifecycle"
+      title="Submit to Reddit"
+      aria-label="Submit to Reddit"
       >
       
 
@@ -1211,7 +1002,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://api.whatsapp.com/send?text=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;resubmit=true&amp;title=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://api.whatsapp.com/send?text=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;resubmit=true&amp;title=Kubernetes%20probes%20and%20pod%20lifecycle"
       title=""
       aria-label=""
       >
@@ -1230,7 +1021,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;resubmit=true&amp;title=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://t.me/share/url?url=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;resubmit=true&amp;title=Kubernetes%20probes%20and%20pod%20lifecycle"
       title=""
       aria-label=""
       >
@@ -1249,9 +1040,9 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;description=Ansible%20complex%20set%20up%20error%20handling"
-      title="钉到 Pinterest"
-      aria-label="钉到 Pinterest"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;description=Kubernetes%20probes%20and%20pod%20lifecycle"
+      title="Pin on Pinterest"
+      aria-label="Pin on Pinterest"
       >
       
 
@@ -1268,9 +1059,9 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;quote=Ansible%20complex%20set%20up%20error%20handling"
-      title="分享到 Facebook"
-      aria-label="分享到 Facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;quote=Kubernetes%20probes%20and%20pod%20lifecycle"
+      title="Share on Facebook"
+      aria-label="Share on Facebook"
       >
       
 
@@ -1287,9 +1078,9 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;subject=Ansible%20complex%20set%20up%20error%20handling"
-      title="通过电子邮件发送"
-      aria-label="通过电子邮件发送"
+      href="mailto:?body=http://localhost:1313/blog/kubernetes-pods-lifecycle/&amp;subject=Kubernetes%20probes%20and%20pod%20lifecycle"
+      title="Send via email"
+      aria-label="Send via email"
       >
       
 
@@ -1318,12 +1109,9 @@
           
           
         
-          
-          
-        
       <script>
-        var oid = "views_blog\\ansible-ignore-errors\\ansible-ignore-errors.md"
-        var oid_likes = "likes_blog\\ansible-ignore-errors\\ansible-ignore-errors.md"
+        var oid = "views_blog\\kubernetes-pods-lifecycle.md"
+        var oid_likes = "likes_blog\\kubernetes-pods-lifecycle.md"
       </script>
       
       
@@ -1343,34 +1131,14 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/zh-cn/blog/pass-data-in-json/pass-data-in-json/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >如何在配置映射中以 JSON 格式传递数据到微服务</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/zh-cn/blog/euro-tourist/euro-tourist/">
+            <a class="flex text-right group ml-3" href="/blog/pass-data-in-json/pass-data-in-json/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Euro travel experience and recommendation</span
+                  >How to pass data in JSON format in config map to the microservice</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -1399,7 +1167,7 @@
       <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
   <a href="#the-top"
     class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-    aria-label="返回顶部" title="返回顶部">
+    aria-label="Scroll to top" title="Scroll to top">
     &uarr;
   </a>
 </div>
@@ -1414,15 +1182,15 @@
           <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="https://www.buymeacoffee.com/nunocoracao"
             title="">
             
-            赞助
+            Donate
           </a>
         </li>
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/zh-cn/authors/"
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/authors/"
             title="">
             
-            作者
+            Authors
           </a>
         </li>
         
@@ -1437,7 +1205,7 @@
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
       2024
-      郭巍
+      Wei Guo
     </p>
     
 
@@ -1446,9 +1214,9 @@
     <p class="text-xs text-neutral-500 dark:text-neutral-400">
       
       
-      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
         href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
     </p>
     
 
@@ -1471,7 +1239,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/zh-cn/"
+  data-url="http://localhost:1313/"
   style="z-index:500"
 >
   <div
@@ -1494,14 +1262,14 @@
           type="search"
           id="search-query"
           class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
-          placeholder="搜索"
+          placeholder="Search"
           tabindex="0"
         />
       </form>
       <button
         id="close-search-button"
         class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-        title="关闭 (Esc)"
+        title="Close (Esc)"
       >
         
 

@@ -5,16 +5,18 @@ draft: true
 ---
 
 Before landed in Sweden:
+
 1. passport and work permit
    check the work permit progress.
-        immigration agency, you can also get more information about what kind of documenation is needed, and read some requirements of it.
+        immigration agency, you can also get more information about what kind of documentation is needed, and read some requirements of it.
 2. pack the luggage
-   There are some normal stufff that for travelling, I think there is no need to repeat. But here are something like I think it is important to bring if you are first come to Sweden.
-   - raincoat/防水外套: There is always some rain during winter, autumn and spring. And since Gothenburg is near the sea, it is also super windy. As a result, most of the time, it is not a good idea to use the umbrella. I would recommand to bring the anti-water coat, it would be much easier and almost every swedes have one.
-   - some hometown kitchenware and food: Sweden food is not very fancy and interesting. If you are from a country full of deleicious food, I recommend you to bring some special pot/species that can used for cooking. For sure, you gonna miss that.
-   - Adpater. If you are not from Euorpe, makee sure to bring appropriate adapters. But if you forget, it is fine you can always buy it from clas oshon.
+   There are some normal stuff that for traveling, I think there is no need to repeat. But here are something I think it is important to bring if you are first come to Sweden.
+   - raincoat/防水外套: There is always some rain during winter, autumn and spring. And since Gothenburg is near the sea, it is also super windy. As a result, most of the time, it is not a good idea to use the umbrella. I would recommend to bring the anti-water coat, it would be much easier and almost every swedes have one.
+   - some hometown kitchenware and food: Sweden food is not very fancy and interesting. If you are from a country full of delicious food, I recommend you to bring some special pot/species that can used for cooking. For sure, you gonna miss that.
+   - Adapter. If you are not from Euorpe, makee sure to bring appropriate adapters. But if you forget, it is fine you can always buy it from clas oshon.
 
 Frist landed in Sweden:
+
 1. Accomandation:
 Our company will find the suitable recommandation for you, so you can just go there and have a rest.
 2. Life use and food
@@ -34,7 +36,8 @@ supermall: nordstan
 6. transportation: vatsirfic, buy tikcet in pressbyran.
 
 Settled down in Sweden:
-1. Accommandation:
+
+1. Accommodation:
    1. rent: homeq, boplast/blocket
    2. buy: hemtex
 2. Culture:

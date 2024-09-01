@@ -5,9 +5,12 @@ date: "2023-05-25"
 tags: ["kubernetes"]
 ---
 <!-- markdownlint-disable MD010 -->
-- When we have little data need to pass from helm chart to service, it quit easy to use the `container.env` part in the `deployment.yaml`. So that we could just `os.getEnv()` in the code, we got the value we want.
-- But what if we have a lot of values to pass, it is a mess to add them all in the helm chart. Then, we could use config map here. Personally, I prefer to use the JSON format, because it is easy to un-marshal to struct, and we can get easy access to all the values.
-- Here are the exact steps to pass data through config map:
+ When we have little data need to pass from helm chart to service, it quit easy to use the `container.env` part in the `deployment.yaml`. So that we could just `os.getEnv()` in the code, we got the value we want.
+
+ But what if we have a lot of values to pass, it is a mess to add them all in the helm chart. Then, we could use config map here. Personally, I prefer to use the JSON format, because it is easy to un-marshal to struct, and we can get easy access to all the values.
+
+ Here are the exact steps to pass data through config map:
+
   1. Set up a config map with json format data.
   
      ```helm
@@ -23,7 +26,7 @@ tags: ["kubernetes"]
         }
         ```
 
-  1. Create a volume in the pod and mount it to the container we want.
+  2. Create a volume in the pod and mount it to the container we want.
 
 	  ```helm
 	  apiVersion: "apps/v1"
@@ -51,7 +54,7 @@ tags: ["kubernetes"]
 
 	  ```
 
-  1. In the code base, we can through `os.getEnv()` get easy access to the JSON file and do the un-marshal to it.
+  3. In the code base, we can through `os.getEnv()` get easy access to the JSON file and do the un-marshal to it.
 
 		```go
 		// Based on the json format

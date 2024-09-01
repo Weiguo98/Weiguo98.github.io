@@ -9,7 +9,17 @@
     <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
     <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
     <copyright>© 2024 Wei Guo</copyright>
-    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Euro travel experience and recommendation</title>
+      <link>http://localhost:1313/blog/euro-tourist/euro-tourist/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <author>guow1227@gmail.com (Wei Guo)</author>
+      <guid>http://localhost:1313/blog/euro-tourist/euro-tourist/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>Ansible complex set up error handling</title>
       <link>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</link>

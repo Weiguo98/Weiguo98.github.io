@@ -3,6 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/zh-cn/blog/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/blog/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/blog/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/zh-cn/tags/daily/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/blog/euro-tourist/euro-tourist/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/zh-cn/tags/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/tags/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/zh-cn/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/zh-cn/tags/ansible/</loc>
     <lastmod>2024-08-14T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -35,51 +105,35 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/zh-cn/blog/</loc>
-    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/zh-cn/tags/kubernetes/</loc>
+    <lastmod>2023-05-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/blog/"
+      href="http://localhost:1313/tags/kubernetes/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/blog/"
+      href="http://localhost:1313/zh-cn/tags/kubernetes/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/zh-cn/tags/</loc>
-    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</loc>
+    <lastmod>2023-05-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/tags/"
+      href="http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/zh-cn/</loc>
-    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/"
+      href="http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/"
     />
   </url>
   <url>

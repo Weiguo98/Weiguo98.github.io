@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Ansible complex set up error handling &middot; Wei的博客</title>
-  <meta name="title" content="Ansible complex set up error handling &middot; Wei的博客" />
+  <title>如何在配置映射中以 JSON 格式传递数据到微服务 &middot; Wei的博客</title>
+  <meta name="title" content="如何在配置映射中以 JSON 格式传递数据到微服务 &middot; Wei的博客" />
   
   <meta name="description" content="一个强大、轻量级的 Hugo 主题。" />
-  <meta name="keywords" content="ansible, " />
+  <meta name="keywords" content="kubernetes, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/" />
+  <link rel="canonical" href="http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/" />
   
   
   
@@ -64,21 +64,21 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/">
+  <meta property="og:url" content="http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/">
   <meta property="og:site_name" content="Wei的博客">
-  <meta property="og:title" content="Ansible complex set up error handling">
-  <meta property="og:description" content="在使用Ansible进行环境配置时，处理错误是一个关键问题，">
+  <meta property="og:title" content="如何在配置映射中以 JSON 格式传递数据到微服务">
+  <meta property="og:description" content="当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 deployment.yaml 中使用">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-08-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-08-14T00:00:00+00:00">
-    <meta property="article:tag" content="Ansible">
+    <meta property="article:published_time" content="2023-05-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-05-25T00:00:00+00:00">
+    <meta property="article:tag" content="Kubernetes">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ansible complex set up error handling">
-  <meta name="twitter:description" content="在使用Ansible进行环境配置时，处理错误是一个关键问题，">
+  <meta name="twitter:title" content="如何在配置映射中以 JSON 格式传递数据到微服务">
+  <meta name="twitter:description" content="当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 deployment.yaml 中使用">
 
   
   <script type="application/ld+json">
@@ -86,26 +86,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blogs",
-    "name": "Ansible complex set up error handling",
-    "headline": "Ansible complex set up error handling",
+    "name": "如何在配置映射中以 JSON 格式传递数据到微服务",
+    "headline": "如何在配置映射中以 JSON 格式传递数据到微服务",
     
-    "abstract": "在使用Ansible进行环境配置时，处理错误是一个关键问题，",
+    "abstract": "当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 deployment.yaml 中使用",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/zh-cn\/blog\/ansible-ignore-errors\/ansible-ignore-errors\/",
+    "url" : "http:\/\/localhost:1313\/zh-cn\/blog\/pass-data-in-json\/pass-data-in-json\/",
     "author" : {
       "@type": "Person",
       "name": "郭巍"
     },
-    "copyrightYear": "2024",
-    "dateCreated": "2024-08-14T00:00:00\u002b00:00",
-    "datePublished": "2024-08-14T00:00:00\u002b00:00",
+    "copyrightYear": "2023",
+    "dateCreated": "2023-05-25T00:00:00\u002b00:00",
+    "datePublished": "2023-05-25T00:00:00\u002b00:00",
     
-    "dateModified": "2024-08-14T00:00:00\u002b00:00",
+    "dateModified": "2023-05-25T00:00:00\u002b00:00",
     
-    "keywords": ["ansible"],
+    "keywords": ["kubernetes"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "987"
+    "wordCount": "451"
   }]
   </script>
 
@@ -291,20 +291,20 @@
 
 
     </span>
-    <div class="text-sm font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">简体中文</div>
+    <div class="text-sm font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="如何在配置映射中以 JSON 格式传递数据到微服务">简体中文</div>
   </div>
   <div class="absolute menuhide">
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
         
-        <a href="/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
+        <a href="/blog/pass-data-in-json/pass-data-in-json/" class="flex items-center">
+          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="How to pass data in JSON format in config map to the microservice">
             English
           </p>
         </a>
         
-        <a href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
+        <a href="/zh-cn/blog/pass-data-in-json/pass-data-in-json/" class="flex items-center">
+          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="如何在配置映射中以 JSON 格式传递数据到微服务">
             简体中文
           </p>
         </a>
@@ -378,20 +378,20 @@
 
 
     </span>
-    <div class="text-sm font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">简体中文</div>
+    <div class="text-sm font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="如何在配置映射中以 JSON 格式传递数据到微服务">简体中文</div>
   </div>
   <div class="absolute menuhide">
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
         
-        <a href="/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
+        <a href="/blog/pass-data-in-json/pass-data-in-json/" class="flex items-center">
+          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="How to pass data in JSON format in config map to the microservice">
             English
           </p>
         </a>
         
-        <a href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/" class="flex items-center">
-          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="Ansible complex set up error handling">
+        <a href="/zh-cn/blog/pass-data-in-json/pass-data-in-json/" class="flex items-center">
+          <p class="text-sm font-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="如何在配置映射中以 JSON 格式传递数据到微服务">
             简体中文
           </p>
         </a>
@@ -674,8 +674,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/"
-      >Ansible complex set up error handling</a
+      href="/zh-cn/blog/pass-data-in-json/pass-data-in-json/"
+      >如何在配置映射中以 JSON 格式传递数据到微服务</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -684,7 +684,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Ansible complex set up error handling
+      如何在配置映射中以 JSON 格式传递数据到微服务
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -729,7 +729,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -739,7 +739,7 @@
 
 <span class="mb-[2px]">
   <a
-    href="https://github.com/Weiguo98/Weiguo98.github.io/tree/main/content/blog/ansible-ignore-errors/ansible-ignore-errors.zh-cn.md"
+    href="https://github.com/Weiguo98/Weiguo98.github.io/tree/main/content/blog/pass-data-in-json/pass-data-in-json.zh-cn.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -811,10 +811,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/zh-cn/tags/ansible/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/zh-cn/tags/kubernetes/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Ansible
+    Kubernetes
   </span>
 </span>
   </span>
@@ -926,127 +926,7 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-     <div
-      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
-      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
-
-         <details open id="TOCView"
-  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
-  <summary
-    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#问题描述">问题描述</a></li>
-        <li><a href="#详细说明">详细说明</a>
-          <ul>
-            <li><a href="#参考资料">参考资料</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
-<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
-  <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#问题描述">问题描述</a></li>
-        <li><a href="#详细说明">详细说明</a>
-          <ul>
-            <li><a href="#参考资料">参考资料</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
-
-<script>
-
-  var margin = 200;
-  var marginError = 50;
-
-  (function () {
-    var $window = $(window);
-    var $toc = $('#TOCView');
-    var tocHeight = $toc.height();
-
-    function onResize() {
-      var windowAndMarginHeight = $window.height() - margin;
-      if(tocHeight >= windowAndMarginHeight) {
-        $toc.css("overflow-y", "scroll")
-        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
-      } else {
-        $toc.css("overflow-y", "hidden")
-        $toc.css("max-height", "9999999px")
-      }
-    }
-
-    $window.on('resize', onResize);
-    $(document).ready(onResize);
-  })();
-
-
-
-  (function () {
-    var $toc = $('#TableOfContents');
-    if ($toc.length > 0) {
-      var $window = $(window);
-
-      function onScroll() {
-        var currentScroll = $window.scrollTop();
-        var h = $('.anchor');
-        var id = "";
-        h.each(function (i, e) {
-          e = $(e);
-          if (e.offset().top - $(window).height()/3 <= currentScroll) {
-            id = decodeURIComponent(e.attr('id'));
-          }
-        });
-        var active = $toc.find('a.active');      
-        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
-
-        active.each(function (i, e) {
-          
-            $(e).removeClass('active');
-          
-        });
-        $toc.find('a[href="#' + id + '"]').addClass('active')
-        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
-          $(e).children('a').parents('ul').show();          
-        });
-      }
-
-      $window.on('scroll', onScroll);
-      $(document).ready(function () {
-        
-        onScroll();
-      });
-    }
-  })();
-
-
-</script>
-   </div>
-      </div>
-      
+    
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -1054,72 +934,80 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>在使用Ansible进行环境配置时，处理错误是一个关键问题，尽管有<code>ignore_errors</code>和<code>fails_when</code>两个keyword支持，但他们只能应用在具体的task，不能应用在role/整个playbook上。本文将介绍如何在复杂设置中如何更好的处理错误，特别是对于应用ansible在测试的情况下。</p>
-
-
-<h3 class="relative group">问题描述 
-    <div id="%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>ignore_errors=true在Ansible角色中不起作用，只在会话中有效。需要在测试任务和后续任务中多次添加此选项，以确保如果测试或者仅仅是不能够获取日志，下一个测试仍然可以运行。那如何更好的处理这种情况避免滥用<code>ignore_errors</code> 以及如果某个测试的预处理任务失败了，该测试可以被跳过，而不是被执行？</p>
-<p>解决方案是，可以重构测试用例，使用<code>block</code>、<code>rescue</code>、<code>always</code>和<code>clear_host_errors</code>。
-以下是一个可以工作的示例：</p>
-<pre tabindex="0"><code class="language-ansible" data-lang="ansible">- block:
-    - name: Pre tasks
-      command: /bin/false
-    - name: Test tasks
-      command: /bin/false
-      register: result
-  rescue:
-    - name: Record error
-      ansible.builtin.debug:
-        var: result
-  always:
-    - name: Post tasks
-      command: echo &#34;post tasks&#34;
-    - name: Clear host errors
-      meta: clear_host_errors
-</code></pre>
-
-<h3 class="relative group">详细说明 
-    <div id="%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>1.使用ignore_errors
-在Ansible中，如果一个任务失败，Ansible默认会停止在该主机上执行任务。但是，你可以使用ignore_errors来忽略错误并继续执行。例如：</p>
-<pre tabindex="0"><code class="language-ansible" data-lang="ansible">- name: Attempt to Execute a Command
-  command: /some/nonexistent/command
-  ignore_errors: true # This task will fail, but the playbook will continue.
-</code></pre><p>2.使用block、rescue和always
-通过将每个角色的任务分解为多个部分，并使用block、rescue和always关键字，可以实现更细粒度的错误处理。 从上面的例子可以看到如果pre task失败了，test task不会被执行，因为他们在一个block里面。ansible task的失败会trigger ansible执行rescue block， 在这里我们可以记录错误，例子中只是使用了debug，也可以写入到verdict/任何文件中。无论block中的task执行状态如何，都会执行post task，在post task中可以加入collect logs等任务，即使失败，在always中的任务仍然会被执行。最后通过clear_host_error 将error删除，这样ansible不会停止在该主机上执行任务，下一个test block仍然会被执行。</p>
-<p>这种结构可以构建多个test在一个playbook中，并且互不影响，能够从一定程度上减少同一时间需要启动的vm的数量。</p>
-
-
-<h4 class="relative group">参考资料 
-    <div id="%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<ul>
-<li><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html" target="_blank">ansible error handling</a></li>
-</ul>
+          <p>当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 <code>deployment.yaml</code> 中使用 <code>container.env</code> 部分。这样我们只需在代码中使用 <code>os.getEnv()</code>就能获取我们想要的值。</p>
+<p>但是如果我们有大量的值需要传递，将它们全部添加到 Helm Chart 中会很混乱。这时，我们可以使用配置映射。个人更喜欢使用 JSON 格式，因为它易于解组为结构体，并且可以轻松访问所有值。</p>
+<p>以下是通过配置映射传递数据的具体步骤：</p>
+<ol>
+<li>
+<p>使用 JSON 格式的数据设置一个配置映射。</p>
+<pre tabindex="0"><code class="language-helm" data-lang="helm">apiVersion: &#34;v1&#34;
+kind: &#34;ConfigMap&#34;
+metadata:
+  name: json-configmap
+data:
+  config.json: |
+  {
+      &#34;key1&#34;: &#34;value1&#34;,
+      &#34;key2&#34;: &#34;value2&#34;
+  }
+</code></pre></li>
+<li>
+<p>在 Pod 中创建一个卷并将其挂载到我们想要的容器中。</p>
+<pre tabindex="0"><code class="language-helm" data-lang="helm">apiVersion: &#34;apps/v1&#34;
+kind: &#34;Deployment&#34;
+metadata:
+  name: &#34;test-service&#34;
+spec:
+  - template:
+      metadata:
+        volumes:
+          - name: &#34;json-config-volume&#34;
+            configMap:
+              // 确保名称与 configmap metadata.name 中的名称相同
+              name: &#34;json-configmap&#34;
+      containers:
+      - name: &#34;container-first&#34;
+        volumeMounts:
+          - name: &#34;config-volume&#34;
+            mountPath: &#34;/etc/config&#34;
+        // 不是必须的，你可以在代码中硬编码，这里放置只是为了确保
+        // 如果有一天我们更改了挂载路径，确保也更改了环境变量。
+        env:
+          - name: &#34;CONFIG_FILE&#34;
+            value: &#34;/etc/config/config.json&#34;
+</code></pre></li>
+<li>
+<p>在代码中，我们可以通过 <code>os.getEnv()</code>轻松访问 JSON 文件并对其进行解组。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// 基于 JSON 格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">type</span> <span class="nx">JsonConfig</span> <span class="kd">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">key1</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">key2</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">getJsonConfig</span><span class="p">()</span> <span class="kt">error</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">filePath</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">LookupEnv</span><span class="p">(</span><span class="s">&#34;CONFIG_FILE&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="s">&#34;failed to get file path&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">config</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">Wrap</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="s">&#34;failed to open file&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">defer</span> <span class="nx">config</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">byteValue</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">Wrap</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="s">&#34;failed to read file&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">jsonConfig</span> <span class="o">:=</span>  <span class="o">&amp;</span><span class="nx">JsonConfig</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">byteValue</span><span class="p">,</span> <span class="nx">jsonConfig</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">Wrap</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="s">&#34;failed to unmarshal file&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ol>
 
           
           
@@ -1137,7 +1025,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;title=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;title=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title="分享到 LinkedIn"
       aria-label="分享到 LinkedIn"
       >
@@ -1156,7 +1044,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;text=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;text=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title="分享到 Twitter"
       aria-label="分享到 Twitter"
       >
@@ -1174,7 +1062,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://bsky.app/intent/compose?text=Ansible%20complex%20set%20up%20error%20handling&#43;http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/"
+      href="https://bsky.app/intent/compose?text=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1&#43;http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/"
       title="Post on Bluesky"
       aria-label="Post on Bluesky"
       >
@@ -1192,7 +1080,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;resubmit=true&amp;title=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://reddit.com/submit/?url=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;resubmit=true&amp;title=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title="提交到 Reddit"
       aria-label="提交到 Reddit"
       >
@@ -1211,7 +1099,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://api.whatsapp.com/send?text=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;resubmit=true&amp;title=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://api.whatsapp.com/send?text=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;resubmit=true&amp;title=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title=""
       aria-label=""
       >
@@ -1230,7 +1118,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;resubmit=true&amp;title=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://t.me/share/url?url=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;resubmit=true&amp;title=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title=""
       aria-label=""
       >
@@ -1249,7 +1137,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;description=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;description=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title="钉到 Pinterest"
       aria-label="钉到 Pinterest"
       >
@@ -1268,7 +1156,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;quote=Ansible%20complex%20set%20up%20error%20handling"
+      href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;quote=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title="分享到 Facebook"
       aria-label="分享到 Facebook"
       >
@@ -1287,7 +1175,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/&amp;subject=Ansible%20complex%20set%20up%20error%20handling"
+      href="mailto:?body=http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/&amp;subject=%e5%a6%82%e4%bd%95%e5%9c%a8%e9%85%8d%e7%bd%ae%e6%98%a0%e5%b0%84%e4%b8%ad%e4%bb%a5%20JSON%20%e6%a0%bc%e5%bc%8f%e4%bc%a0%e9%80%92%e6%95%b0%e6%8d%ae%e5%88%b0%e5%be%ae%e6%9c%8d%e5%8a%a1"
       title="通过电子邮件发送"
       aria-label="通过电子邮件发送"
       >
@@ -1322,8 +1210,8 @@
           
         
       <script>
-        var oid = "views_blog\\ansible-ignore-errors\\ansible-ignore-errors.md"
-        var oid_likes = "likes_blog\\ansible-ignore-errors\\ansible-ignore-errors.md"
+        var oid = "views_blog\\pass-data-in-json\\pass-data-in-json.md"
+        var oid_likes = "likes_blog\\pass-data-in-json\\pass-data-in-json.md"
       </script>
       
       
@@ -1343,34 +1231,14 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/zh-cn/blog/pass-data-in-json/pass-data-in-json/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >如何在配置映射中以 JSON 格式传递数据到微服务</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/zh-cn/blog/euro-tourist/euro-tourist/">
+            <a class="flex text-right group ml-3" href="/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Euro travel experience and recommendation</span
+                  >Ansible complex set up error handling</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   

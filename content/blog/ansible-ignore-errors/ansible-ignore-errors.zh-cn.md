@@ -7,6 +7,7 @@ tags: ["ansible"]
 在使用Ansible进行环境配置时，处理错误是一个关键问题，尽管有`ignore_errors`和`fails_when`两个keyword支持，但他们只能应用在具体的task，不能应用在role/整个playbook上。本文将介绍如何在复杂设置中如何更好的处理错误，特别是对于应用ansible在测试的情况下。
 
 ### 问题描述
+
 ignore_errors=true在Ansible角色中不起作用，只在会话中有效。需要在测试任务和后续任务中多次添加此选项，以确保如果测试或者仅仅是不能够获取日志，下一个测试仍然可以运行。那如何更好的处理这种情况避免滥用`ignore_errors` 以及如果某个测试的预处理任务失败了，该测试可以被跳过，而不是被执行？
 
 解决方案是，可以重构测试用例，使用`block`、`rescue`、`always`和`clear_host_errors`。
