@@ -25,22 +25,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/blog/euro-tourist/euro-tourist/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/"
-    />
-  </url>
-  <url>
     <loc>http://localhost:1313/zh-cn/tags/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -71,6 +55,12 @@
       hreflang="zh-cn"
       href="http://localhost:1313/zh-cn/"
     />
+  </url>
+  <url>
+    <loc>http://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/zh-cn/tags/ansible/</loc>

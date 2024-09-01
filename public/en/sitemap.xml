@@ -3,22 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/tags/ansible/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/ansible/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/tags/ansible/"
-    />
-  </url>
-  <url>
     <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -32,38 +16,6 @@
       rel="alternate"
       hreflang="en"
       href="http://localhost:1313/blog/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/euro-tourist/euro-tourist/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/blog/euro-tourist/euro-tourist/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/tags/"
     />
   </url>
   <url>
@@ -83,6 +35,22 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/tags/ansible/</loc>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/tags/ansible/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/tags/ansible/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</loc>
     <lastmod>2024-08-14T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -96,6 +64,22 @@
       rel="alternate"
       hreflang="en"
       href="http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/tags/"
     />
   </url>
   <url>
