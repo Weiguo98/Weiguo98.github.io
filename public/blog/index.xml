@@ -6,18 +6,50 @@
     <description>Recent content in Blogs on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
-    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
-    <copyright>© 2024 Wei Guo</copyright>
-    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Security Policy in QNX</title>
+      <link>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</link>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;What is security policy? 
+    &lt;div id=&#34;what-is-security-policy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#what-is-security-policy&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Official documents: &lt;a
+  href=&#34;https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html&#34;
+    target=&#34;_blank&#34;
+  &gt;https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It basically is a file that in a system level set processes which operations it is permitted to do.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Ansible complex set up error handling</title>
       <link>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</guid>
-      <description>Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.
-Problem Description #ignore_errors=true is ineffective in Ansible roles, only working within sessions.</description>
+      <description>&lt;p&gt;Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Problem Description 
+    &lt;div id=&#34;problem-description&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#problem-description&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;ignore_errors=true&lt;/code&gt; is ineffective in Ansible roles, only working within sessions. This requires repeatedly adding this option in test and subsequent tasks to ensure the next test runs even if the previous one fails. How can we avoid overusing ignore_errors and skip tests if pre-tasks fail?&lt;/p&gt;</description>
       
     </item>
     
@@ -25,9 +57,10 @@ Problem Description #ignore_errors=true is ineffective in Ansible roles, only w
       <title>How to pass data in JSON format in config map to the microservice</title>
       <link>http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</guid>
-      <description>When we have little data need to pass from helm chart to service, it quit easy to use the container.env part in the deployment.yaml. So that we could just os.</description>
+      <description>&lt;!-- markdownlint-disable MD010 --&gt;
+&lt;p&gt;When we have little data need to pass from helm chart to service, it quit easy to use the &lt;code&gt;container.env&lt;/code&gt; part in the &lt;code&gt;deployment.yaml&lt;/code&gt;. So that we could just &lt;code&gt;os.getEnv()&lt;/code&gt; in the code, we got the value we want.&lt;/p&gt;</description>
       
     </item>
     
@@ -35,9 +68,23 @@ Problem Description #ignore_errors=true is ineffective in Ansible roles, only w
       <title>Kubernetes probes and pod lifecycle</title>
       <link>http://localhost:1313/blog/kubernetes-pods-lifecycle/</link>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/blog/kubernetes-pods-lifecycle/</guid>
-      <description>Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Readiness and Liveness probe
+&lt;a
+  href=&#34;https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#before-you-begin&#34;
+    target=&#34;_blank&#34;
+  &gt;Configure Liveness, Readiness and Startup Probes | Kubernetes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a
+  href=&#34;https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/&#34;
+    target=&#34;_blank&#34;
+  &gt;kubelet&lt;/a&gt; uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.&lt;/li&gt;
+&lt;li&gt;The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.&lt;/li&gt;
+&lt;li&gt;The readiness check will continuously run in the pod lifecycle.
+&lt;blockquote&gt;
+&lt;p&gt;As long as Liveness Probe passed, the pod status changed to &lt;code&gt;running&lt;/code&gt;. If you want to connect to a pod when it is ready for traffic, it is better to check the &lt;code&gt;ready&lt;/code&gt; keywords.&lt;/p&gt;</description>
       
     </item>
     

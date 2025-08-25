@@ -28,6 +28,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | check                | {{< icon check >}}                |
 | circle-info          | {{< icon circle-info >}}          |
 | code                 | {{< icon code>}}                  |
+| codeberg             | {{< icon codeberg >}}             |
 | codepen              | {{< icon codepen >}}              |
 | comment              | {{< icon comment >}}              |
 | dev                  | {{< icon dev >}}                  |
@@ -51,6 +52,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | globe                | {{< icon globe >}}                |
 | goodreads            | {{< icon goodreads >}}            |
 | google               | {{< icon google >}}               |
+| google-scholar       | {{< icon google-scholar >}}       |
 | graduation-cap       | {{< icon graduation-cap >}}       |
 | hackernews           | {{< icon hackernews >}}           |
 | hashnode             | {{< icon hashnode >}}             |
@@ -58,12 +60,14 @@ The full list of built-in icons and their corresponding names can referenced bel
 | heart                | {{< icon heart >}}                |
 | image                | {{< icon image >}}                |
 | instagram            | {{< icon instagram >}}            |
+| itch-io              | {{< icon itch-io >}}              |
 | keybase              | {{< icon keybase >}}              |
 | kickstarter          | {{< icon kickstarter >}}          |
 | ko-fi                | {{< icon ko-fi >}}                |
 | language             | {{< icon language >}}             |
 | lastfm               | {{< icon lastfm >}}               |
 | lightbulb            | {{< icon lightbulb >}}            |
+| line                 | {{< icon line >}}                 |
 | link                 | {{< icon link >}}                 |
 | linkedin             | {{< icon linkedin >}}             |
 | list                 | {{< icon list >}}                 |
@@ -78,10 +82,12 @@ The full list of built-in icons and their corresponding names can referenced bel
 | orcid                | {{< icon orcid >}}                |
 | patreon              | {{< icon patreon >}}              |
 | paypal               | {{< icon paypal >}}               |
+| peertube             | {{< icon peertube >}}             |
 | pencil               | {{< icon pencil >}}               |
 | pgpkey               | {{< icon pgpkey >}}               |
 | phone                | {{< icon phone >}}                |
 | pinterest            | {{< icon pinterest >}}            |
+| pixelfed             | {{< icon pixelfed >}}             |
 | poo                  | {{< icon poo >}}                  |
 | reddit               | {{< icon reddit >}}               |
 | researchgate         | {{< icon researchgate >}}         |
@@ -94,6 +100,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | slack                | {{< icon slack >}}                |
 | snapchat             | {{< icon snapchat >}}             |
 | soundcloud           | {{< icon soundcloud >}}           |
+| spotify              | {{< icon spotify >}}              |
 | stack-overflow       | {{< icon stack-overflow >}}       |
 | star                 | {{< icon star >}}                 |
 | steam                | {{< icon steam >}}                |
@@ -110,6 +117,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | twitter              | {{< icon twitter >}}              |
 | wand-magic-sparkles  | {{< icon wand-magic-sparkles >}}  |
 | whatsapp             | {{< icon whatsapp >}}             |
+| worktree             | {{< icon worktree >}}             |
 | x-twitter            | {{< icon x-twitter >}}            |
 | xing                 | {{< icon xing >}}                 |
 | xmark                | {{< icon xmark >}}                |

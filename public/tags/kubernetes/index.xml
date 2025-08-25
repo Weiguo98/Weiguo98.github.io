@@ -6,17 +6,17 @@
     <description>Recent content in Kubernetes on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
-    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
-    <copyright>© 2024 Wei Guo</copyright>
+    <copyright>© 2025 </copyright>
     <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>How to pass data in JSON format in config map to the microservice</title>
       <link>http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</guid>
-      <description>When we have little data need to pass from helm chart to service, it quit easy to use the container.env part in the deployment.yaml. So that we could just os.</description>
+      <description>&lt;!-- markdownlint-disable MD010 --&gt;
+&lt;p&gt;When we have little data need to pass from helm chart to service, it quit easy to use the &lt;code&gt;container.env&lt;/code&gt; part in the &lt;code&gt;deployment.yaml&lt;/code&gt;. So that we could just &lt;code&gt;os.getEnv()&lt;/code&gt; in the code, we got the value we want.&lt;/p&gt;</description>
       
     </item>
     
@@ -24,9 +24,23 @@
       <title>Kubernetes probes and pod lifecycle</title>
       <link>http://localhost:1313/blog/kubernetes-pods-lifecycle/</link>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/blog/kubernetes-pods-lifecycle/</guid>
-      <description>Readiness and Liveness probe Configure Liveness, Readiness and Startup Probes | Kubernetes The kubelet uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress.</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Readiness and Liveness probe
+&lt;a
+  href=&#34;https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#before-you-begin&#34;
+    target=&#34;_blank&#34;
+  &gt;Configure Liveness, Readiness and Startup Probes | Kubernetes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a
+  href=&#34;https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/&#34;
+    target=&#34;_blank&#34;
+  &gt;kubelet&lt;/a&gt; uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.&lt;/li&gt;
+&lt;li&gt;The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.&lt;/li&gt;
+&lt;li&gt;The readiness check will continuously run in the pod lifecycle.
+&lt;blockquote&gt;
+&lt;p&gt;As long as Liveness Probe passed, the pod status changed to &lt;code&gt;running&lt;/code&gt;. If you want to connect to a pod when it is ready for traffic, it is better to check the &lt;code&gt;ready&lt;/code&gt; keywords.&lt;/p&gt;</description>
       
     </item>
     

@@ -25,6 +25,12 @@ article:
   part: "جزء"
   this_article: "هذه المقالة"
 
+a11y:
+  disable_blur: "تعطيل التمويه"
+  disable_images: "تعطيل الصور"
+  show_link_underline: "إظهار خط تحت الروابط"
+  font_size: "حجم الخط"
+
 author:
   byline_title: "الناشر"
 
@@ -58,6 +64,7 @@ search:
 sharing:
   email: "إرسال عبر البريد الإلكترونى"
   facebook: "النشر على فيسبوك"
+  line: "شارك على لاين"
   linkedin: "النشر على لينكدان"
   pinterest: "النشر على بينترست"
   reddit: "النشر على ريديت"

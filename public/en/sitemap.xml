@@ -4,7 +4,7 @@
 
   <url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -19,8 +19,36 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/tags/qnx/</loc>
+    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</loc>
+    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/zh-cn/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/tags/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -64,22 +92,6 @@
       rel="alternate"
       hreflang="en"
       href="http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/tags/"
     />
   </url>
   <url>

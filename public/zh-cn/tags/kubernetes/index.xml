@@ -6,15 +6,34 @@
     <description>Recent content in Kubernetes on Wei的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2024 郭巍</copyright>
+    <copyright>© 2025 </copyright>
     <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>如何在配置映射中以 JSON 格式传递数据到微服务</title>
       <link>http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</guid>
-      <description>当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 deployment.yaml 中使用</description>
+      <description>&lt;p&gt;当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 &lt;code&gt;deployment.yaml&lt;/code&gt; 中使用 &lt;code&gt;container.env&lt;/code&gt; 部分。这样我们只需在代码中使用 &lt;code&gt;os.getEnv()&lt;/code&gt;就能获取我们想要的值。&lt;/p&gt;
+&lt;p&gt;但是如果我们有大量的值需要传递，将它们全部添加到 Helm Chart 中会很混乱。这时，我们可以使用配置映射。个人更喜欢使用 JSON 格式，因为它易于解组为结构体，并且可以轻松访问所有值。&lt;/p&gt;
+&lt;p&gt;以下是通过配置映射传递数据的具体步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 JSON 格式的数据设置一个配置映射。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-helm&#34; data-lang=&#34;helm&#34;&gt;apiVersion: &amp;#34;v1&amp;#34;
+kind: &amp;#34;ConfigMap&amp;#34;
+metadata:
+  name: json-configmap
+data:
+  config.json: |
+  {
+      &amp;#34;key1&amp;#34;: &amp;#34;value1&amp;#34;,
+      &amp;#34;key2&amp;#34;: &amp;#34;value2&amp;#34;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 Pod 中创建一个卷并将其挂载到我们想要的容器中。&lt;/p&gt;</description>
       
     </item>
     

@@ -6,15 +6,56 @@
     <description>Recent content in Ansible on Wei的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2024 郭巍</copyright>
+    <copyright>© 2025 </copyright>
     <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Ansible complex set up error handling</title>
       <link>http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</guid>
-      <description>在使用Ansible进行环境配置时，处理错误是一个关键问题，</description>
+      <description>&lt;p&gt;在使用Ansible进行环境配置时，处理错误是一个关键问题，尽管有&lt;code&gt;ignore_errors&lt;/code&gt;和&lt;code&gt;fails_when&lt;/code&gt;两个keyword支持，但他们只能应用在具体的task，不能应用在role/整个playbook上。本文将介绍如何在复杂设置中如何更好的处理错误，特别是对于应用ansible在测试的情况下。&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;问题描述 
+    &lt;div id=&#34;问题描述&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;ignore_errors=true在Ansible角色中不起作用，只在会话中有效。需要在测试任务和后续任务中多次添加此选项，以确保如果测试或者仅仅是不能够获取日志，下一个测试仍然可以运行。那如何更好的处理这种情况避免滥用&lt;code&gt;ignore_errors&lt;/code&gt; 以及如果某个测试的预处理任务失败了，该测试可以被跳过，而不是被执行？&lt;/p&gt;
+&lt;p&gt;解决方案是，可以重构测试用例，使用&lt;code&gt;block&lt;/code&gt;、&lt;code&gt;rescue&lt;/code&gt;、&lt;code&gt;always&lt;/code&gt;和&lt;code&gt;clear_host_errors&lt;/code&gt;。
+以下是一个可以工作的示例：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-ansible&#34; data-lang=&#34;ansible&#34;&gt;- block:
+    - name: Pre tasks
+      command: /bin/false
+    - name: Test tasks
+      command: /bin/false
+      register: result
+  rescue:
+    - name: Record error
+      ansible.builtin.debug:
+        var: result
+  always:
+    - name: Post tasks
+      command: echo &amp;#34;post tasks&amp;#34;
+    - name: Clear host errors
+      meta: clear_host_errors
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;详细说明 
+    &lt;div id=&#34;详细说明&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;1.使用ignore_errors
+在Ansible中，如果一个任务失败，Ansible默认会停止在该主机上执行任务。但是，你可以使用ignore_errors来忽略错误并继续执行。例如：&lt;/p&gt;</description>
       
     </item>
     

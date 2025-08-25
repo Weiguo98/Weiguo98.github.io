@@ -72,15 +72,17 @@ This is an error!
 | Parameter | Description                                              |
 | --------- | -------------------------------------------------------- |
 | `link`    | **Required.** the `.RelPermalink` to the target article. |
+| `showSummary` | **Optional.** A boolean value indicating whether to show the article summary. If not set, the site's default configuration will be used. |
+| `compactSummary` | **Optional.** A boolean value indicating whether to display the summary in compact mode. Default to false. |
 <!-- prettier-ignore-end -->
 
 **Example:**
 
 ```md
-{{</* article link="/docs/welcome/" */>}}
+{{</* article link="/docs/welcome/" showSummary=true compactSummary=true */>}}
 ```
 
-{{< article link="/docs/welcome/" >}}
+{{< article link="/docs/welcome/" showSummary=true compactSummary=true >}}
 
 <br/><br/><br/>
 
@@ -104,7 +106,7 @@ New article!
 
 ## Button
 
-`button` outputs a styled button component which can be used to highlight a primary action. It has two optional variables `href` and `target` which can be used to specify the URL and target of the link.
+`button` outputs a styled button component which can be used to highlight a primary action. It has three optional variables `href`, `target` and `rel` which can be used to specify the URL, target and relation of the link.
 
 **Example:**
 
@@ -294,15 +296,15 @@ Blowfish also supports automatic conversion of images included using standard Ma
 | Parameter | Description                                           |
 | --------- | ----------------------------------------------------- |
 | `repo`    | [String] forgejo repo in the format of `username/repo`|
-| `server`  | [String] server URL like `https://v8.next.forgejo.org`|
+| `server`  | [String] server URL like `https://v11.next.forgejo.org`|
 <!-- prettier-ignore-end -->
 
 **Example 1:**
 
 ```md
-{{</* forgejo server="https://v8.next.forgejo.org" repo="forgejo/forgejo" */>}}
+{{</* forgejo server="https://v11.next.forgejo.org" repo="a/mastodon" */>}}
 ```
-{{< forgejo server="https://v8.next.forgejo.org" repo="forgejo/forgejo" >}}
+{{< forgejo server="https://v11.next.forgejo.org" repo="a/mastodon" >}}
 
 <br/><br/><br/>
 
@@ -365,6 +367,34 @@ In order to add images to the gallery, use `img` tags for each image and add `cl
 
 <br/><br/><br/>
 
+## Gist
+
+`gist` shortcode allows you to embed a GitHub Gist directly into your content by specifying the Gist user, ID, and optionally a specific file.
+
+| Parameter      | Description                                                        |
+| -------------- | ------------------------------------------------------------------ |
+| `[0]`          | [String] GitHub username                                           |
+| `[1]`          | [String] Gist ID                                                   |
+| `[2]` (optional)| [String] Filename within the Gist to embed (optional)             |
+
+**Example 1: Embed entire Gist**
+
+```md
+{{</* gist "octocat" "6cad326836d38bd3a7ae" */>}}
+````
+
+{{< gist "octocat" "6cad326836d38bd3a7ae" >}}
+
+**Example 2: Embed specific file from Gist**
+
+```md
+{{</* gist "rauchg" "2052694" "README.md" */>}}
+```
+
+{{< gist "rauchg" "2052694" "README.md" >}}
+
+<br/><br/><br/>
+
 ## Gitea Card
 
 `gitea` allows you to quickly link a Gitea repository via the gitea API, providing real-time updates on stats such as stars and forks.
@@ -390,18 +420,19 @@ In order to add images to the gallery, use `img` tags for each image and add `cl
 `github` allows you to quickly link a github repository, all while showing and updating in realtime stats about it, such as the number of stars and forks it has.
 
 <!-- prettier-ignore-start -->
-| Parameter | Description                                           |
-| --------- | ----------------------------------------------------- |
-| `repo`    | [String] github repo in the format of `username/repo` |
+| Parameter       | Description                                                   |
+|-----------------|---------------------------------------------------------------|
+| `repo`          | [String] github repo in the format of `username/repo`         |
+| `showThumbnail` | **Optional** [boolean] display a thumbnail for the repository |
 <!-- prettier-ignore-end -->
 
 **Example 1:**
 
 ```md
-{{</* github repo="nunocoracao/blowfish" */>}}
+{{</* github repo="nunocoracao/blowfish" showThumbnail=true */>}}
 ```
 
-{{< github repo="nunocoracao/blowfish" >}}
+{{< github repo="nunocoracao/blowfish" showThumbnail=true >}}
 
 <br/><br/><br/>
 
@@ -426,6 +457,35 @@ Finally, custom GitLab instance URL can be provided, as long as the `api/v4/proj
 ```
 
 {{< gitlab projectID="278964" >}}
+
+<br/><br/><br/>
+
+## Hugging Face Card
+
+`huggingface` allows you to quickly link a Hugging Face model or dataset, displaying real-time information such as the number of likes and downloads, along with type and description.
+
+| Parameter  | Description                                                    |
+|------------|----------------------------------------------------------------|
+| `model`    | [String] Hugging Face model in the format of `username/model` |
+| `dataset`  | [String] Hugging Face dataset in the format of `username/dataset` |
+
+**Note:** Use either `model` or `dataset` parameter, not both.
+
+**Example 1 (Model):**
+
+```md
+{{</* huggingface model="google-bert/bert-base-uncased" */>}}
+```
+
+{{< huggingface model="google-bert/bert-base-uncased" >}}
+
+**Example 2 (Dataset):**
+
+```md
+{{</* huggingface dataset="stanfordnlp/imdb" */>}}
+```
+
+{{< huggingface dataset="stanfordnlp/imdb" >}}
 
 <br/><br/><br/>
 
@@ -455,17 +515,17 @@ The `katex` shortcode can be used to add mathematical expressions to article con
 
 To include mathematical expressions in an article, simply place the shortcode anywhere with the content. It only needs to be included once per article and KaTeX will automatically render any markup on that page. Both inline and block notation are supported.
 
-Inline notation can be generated by wrapping the expression in `\\(` and `\\)` delimiters. Alternatively, block notation can be generated using `$$` delimiters.
+Inline notation can be generated by wrapping the expression in `\(` and `\)` delimiters. Alternatively, block notation can be generated using `$$` delimiters.
 
 **Example:**
 
 ```md
 {{</* katex */>}}
-\\(f(a,b,c) = (a^2+b^2+c^2)^3\\)
+\(f(a,b,c) = (a^2+b^2+c^2)^3\)
 ```
 
 {{< katex >}}
-\\(f(a,b,c) = (a^2+b^2+c^2)^3\\)
+\(f(a,b,c) = (a^2+b^2+c^2)^3\)
 
 Check out the [mathematical notation samples]({{< ref "mathematical-notation" >}}) page for more examples.
 
@@ -718,7 +778,7 @@ With other shortcodes
 {{< timeline >}}
 
 {{< timelineItem icon="github" header="header" badge="badge test" subheader="subheader" >}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus.
 {{</ timelineItem >}}
 
 

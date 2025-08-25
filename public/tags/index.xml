@@ -6,15 +6,24 @@
     <description>Recent content in Tags on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
-    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
-    <copyright>© 2024 Wei Guo</copyright>
-    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>QNX</title>
+      <link>http://localhost:1313/tags/qnx/</link>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/qnx/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>Ansible</title>
       <link>http://localhost:1313/tags/ansible/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/tags/ansible/</guid>
       <description></description>
       
@@ -24,7 +33,7 @@
       <title>Kubernetes</title>
       <link>http://localhost:1313/tags/kubernetes/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      <author>guow1227@gmail.com (Wei Guo)</author>
+      
       <guid>http://localhost:1313/tags/kubernetes/</guid>
       <description></description>
       
