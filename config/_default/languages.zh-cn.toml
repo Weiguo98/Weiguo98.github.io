@@ -11,7 +11,7 @@ title = "Wei的博客"
   logo = "img/blowfish_logo_transparent.png"
   description = "一个强大、轻量级的 Hugo 主题。"
 
-[author]
+[params.author]
   name = "郭巍"
   image = "img/blowfish_logo.png"
   headline = "国家一级睡觉艺术家"

@@ -4,14 +4,14 @@ weight = 1
 title = "Wei's Home"
 
 [params]
-  displayName = "English"
+  displayName = "En"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
   logo = "img/blowfish_logo_transparent.png"
   description = "A powerful, lightweight theme for Hugo."
 
-[author]
+[params.author]
   name = "Wei Guo"
   email = "guow1227@gmail.com"
   image = "img/blowfish_logo.png"

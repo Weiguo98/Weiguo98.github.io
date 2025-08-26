@@ -42,7 +42,7 @@ smartTOCHideUnfocusedChildren = false
   layout = "hero" # valid options: page, profile, hero, card, background, custom
   # homepageImage = "/img/iceland.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 6
+  showRecentItems = 3
   showMoreLink = true
   showMoreLinkDest = "docs"
   cardView = true
@@ -73,10 +73,10 @@ smartTOCHideUnfocusedChildren = false
   showTableOfContents = true
   showRelatedContent = true
   relatedContentLimit = 6
-  showTaxonomies = true 
-  showAuthorsBadges = true 
-  showWordCount = false
-  sharingLinks = [ "linkedin", "twitter", "bluesky", "reddit", "whatsapp", "telegram", "pinterest", "facebook", "email"]
+  showTaxonomies = true
+  showAuthorsBadges = true
+  showWordCount = true
+  # sharingLinks = [ "linkedin", "twitter", "bluesky", "reddit", "whatsapp", "telegram", "pinterest", "facebook", "email"]
   showZenMode = true
 
 [list]
@@ -119,7 +119,7 @@ smartTOCHideUnfocusedChildren = false
   groupByYear = false
   cardView = true
   cardViewScreenWidth = false
-  
+
 [firebase]
   # apiKey = "AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
   # authDomain = "blowfish-21fff.firebaseapp.com"
