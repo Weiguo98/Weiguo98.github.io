@@ -6,14 +6,16 @@
     <description>Recent content in QNX on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 </copyright>
+    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
+    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
+    <copyright>© 2025 Wei Guo</copyright>
     <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/qnx/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Security Policy in QNX</title>
       <link>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</link>
       <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      
+      <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;What is security policy? 
     &lt;div id=&#34;what-is-security-policy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;

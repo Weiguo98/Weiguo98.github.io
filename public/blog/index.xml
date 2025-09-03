@@ -6,14 +6,16 @@
     <description>Recent content in Blogs on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 </copyright>
+    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
+    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
+    <copyright>© 2025 Wei Guo</copyright>
     <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Security Policy in QNX</title>
       <link>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</link>
       <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      
+      <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;What is security policy? 
     &lt;div id=&#34;what-is-security-policy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -36,7 +38,7 @@
       <title>Ansible complex set up error handling</title>
       <link>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      
+      <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</guid>
       <description>&lt;p&gt;Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.&lt;/p&gt;
 
@@ -57,7 +59,7 @@
       <title>How to pass data in JSON format in config map to the microservice</title>
       <link>http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      
+      <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</guid>
       <description>&lt;!-- markdownlint-disable MD010 --&gt;
 &lt;p&gt;When we have little data need to pass from helm chart to service, it quit easy to use the &lt;code&gt;container.env&lt;/code&gt; part in the &lt;code&gt;deployment.yaml&lt;/code&gt;. So that we could just &lt;code&gt;os.getEnv()&lt;/code&gt; in the code, we got the value we want.&lt;/p&gt;</description>
@@ -68,7 +70,7 @@
       <title>Kubernetes probes and pod lifecycle</title>
       <link>http://localhost:1313/blog/kubernetes-pods-lifecycle/</link>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
-      
+      <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/kubernetes-pods-lifecycle/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Readiness and Liveness probe

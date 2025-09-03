@@ -47,6 +47,7 @@ Example:
     ```
 
 1. Using block, rescue, and always
+
     By breaking down each role's tasks into multiple parts and using the block, rescue, and always keywords, more granular error handling can be achieved. As seen in the example above, if the pre task fails, the test task will not be executed because they are in the same block. The failure of an Ansible task will trigger the execution of the rescue block, where we can log errors. In the example, debug is used, but you can also write to a verdict/any file so that we can judge the overall test results in the end. Regardless of the execution status of the tasks in the block, the post task will always be executed. In the post task, you can add tasks such as collecting logs. Even if it fails, the tasks in always will still be executed. Finally, by using clear_host_error, the error is removed, so Ansible will not stop executing tasks on that host, and the next test block will still be executed.
 
 This structure can build multiple tests in a playbook without affecting each other, which can reduce the number of VMs that need to be started at the same time to a certain extent.

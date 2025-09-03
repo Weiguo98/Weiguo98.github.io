@@ -6,14 +6,16 @@
     <description>Recent content in Ansible on Wei&#39;s Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 </copyright>
+    <managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor>
+    <webMaster>guow1227@gmail.com (Wei Guo)</webMaster>
+    <copyright>© 2025 Wei Guo</copyright>
     <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ansible complex set up error handling</title>
       <link>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      
+      <author>guow1227@gmail.com (Wei Guo)</author>
       <guid>http://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</guid>
       <description>&lt;p&gt;Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.&lt;/p&gt;
 

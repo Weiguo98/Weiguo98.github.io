@@ -14,7 +14,7 @@ enableCodeCopy = true
 
 replyByEmail = false
 
-mainSections = ["blog"]
+# mainSections = ["blog"]
 # robots = ""
 
 disableImageOptimization = false
@@ -22,7 +22,7 @@ disableTextInHeader = false
 # backgroundImageWidth = 1200
 
 defaultBackgroundImage = "/img/background.svg"
-defaultFeaturedImage = "/img/featured.svg"
+# defaultFeaturedImage = "/img/featured.svg"
 
 highlightCurrentMenuArea = true
 smartTOC = true
@@ -44,14 +44,15 @@ smartTOCHideUnfocusedChildren = false
   showRecent = true
   showRecentItems = 3
   showMoreLink = true
-  showMoreLinkDest = "docs"
+  showMoreLinkDest = "blog"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # only used when layout equals background
+  layoutBackgroundBlur = false # only used when layout equals background
+  disableHeroImageFilter = false # only used when layout equals hero
 
 [article]
   showDate = false
-  showViews = false
+  showViews = true
   showLikes = false
   showDateOnlyInArticle = false
   showDateUpdated = false
@@ -97,7 +98,7 @@ smartTOCHideUnfocusedChildren = false
   constrainItemsWidth = false
 
 [sitemap]
-  excludedKinds = []
+  excludedKinds = ["taxonomy", "term"]
 
 [taxonomy]
   showTermCount = true
@@ -117,7 +118,7 @@ smartTOCHideUnfocusedChildren = false
   showLikes = false
   showTableOfContents = true
   groupByYear = false
-  cardView = true
+  cardView = false
   cardViewScreenWidth = false
 
 [firebase]

@@ -19,32 +19,10 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/qnx/</loc>
-    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/blog/qnx-secpol/qnx-secpol/</loc>
     <lastmod>2025-08-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/tags/"
-    />
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
@@ -60,22 +38,6 @@
       rel="alternate"
       hreflang="en"
       href="http://localhost:1313/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/ansible/</loc>
-    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/ansible/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/tags/ansible/"
     />
   </url>
   <url>
@@ -111,70 +73,9 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/kubernetes/</loc>
-    <lastmod>2023-05-25T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/kubernetes/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/tags/kubernetes/"
-    />
-  </url>
-  <url>
     <loc>http://localhost:1313/blog/kubernetes-pods-lifecycle/</loc>
     <lastmod>2023-01-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/authors/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/authors/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/authors/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/categories/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/categories/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/series/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/series/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/series/"
-    />
   </url>
 </urlset>

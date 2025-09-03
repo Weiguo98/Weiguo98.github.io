@@ -9,7 +9,6 @@ title = "Wei的博客"
   rtl = false
   dateFormat = "2006-01-02"
   logo = "img/blowfish_logo_transparent.png"
-  description = "一个强大、轻量级的 Hugo 主题。"
 
 [params.author]
   name = "郭巍"
