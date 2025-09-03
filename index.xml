@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wei's Home</title><link>https://localhost:1313/</link><description>Recent content on Wei's Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor><webMaster>guow1227@gmail.com (Wei Guo)</webMaster><copyright>© 2025 Wei Guo</copyright><lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>Security Policy in QNX</title><link>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</link><pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid><description>&lt;h2 class="relative group">What is security policy?
-&lt;div id="what-is-security-policy" class="anchor">&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wei's Home</title><link>https://localhost:1313/</link><description>Recent content on Wei's Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor><webMaster>guow1227@gmail.com (Wei Guo)</webMaster><copyright>© 2025 Wei Guo</copyright><lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>Security Policy in QNX</title><link>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</link><pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid><description>&lt;h2 class="relative group"&gt;What is security policy?
+&lt;div id="what-is-security-policy" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#what-is-security-policy" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Official documents: &lt;a
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#what-is-security-policy" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;Official documents: &lt;a
 href="https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html"
 target="_blank"
->https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html&lt;/a>&lt;/p>
-&lt;p>It basically is a file that in a system level set processes which operations it is permitted to do.&lt;/p></description></item><item><title>Ansible complex set up error handling</title><link>https://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</link><pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</guid><description>&lt;p>Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.&lt;/p>
-&lt;h3 class="relative group">Problem Description
-&lt;div id="problem-description" class="anchor">&lt;/div>
+&gt;https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It basically is a file that in a system level set processes which operations it is permitted to do.&lt;/p&gt;</description></item><item><title>Ansible complex set up error handling</title><link>https://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</link><pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/ansible-ignore-errors/ansible-ignore-errors/</guid><description>&lt;p&gt;Handling errors during environment configuration with Ansible is crucial. While ignore_errors and fails_when keywords exist, they only apply to specific tasks, not to roles or entire playbooks.&lt;/p&gt;
+&lt;h3 class="relative group"&gt;Problem Description
+&lt;div id="problem-description" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#problem-description" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h3>
-&lt;p>&lt;code>ignore_errors=true&lt;/code> is ineffective in Ansible roles, only working within sessions. This requires repeatedly adding this option in test and subsequent tasks to ensure the next test runs even if the previous one fails. How can we avoid overusing ignore_errors and skip tests if pre-tasks fail?&lt;/p></description></item><item><title>How to pass data in JSON format in config map to the microservice</title><link>https://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</link><pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</guid><description>&lt;!-- markdownlint-disable MD010 -->
-&lt;p>When we have little data need to pass from helm chart to service, it quit easy to use the &lt;code>container.env&lt;/code> part in the &lt;code>deployment.yaml&lt;/code>. So that we could just &lt;code>os.getEnv()&lt;/code> in the code, we got the value we want.&lt;/p></description></item><item><title>Kubernetes probes and pod lifecycle</title><link>https://localhost:1313/blog/kubernetes-pods-lifecycle/</link><pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/kubernetes-pods-lifecycle/</guid><description>&lt;ul>
-&lt;li>Readiness and Liveness probe
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#problem-description" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;ignore_errors=true&lt;/code&gt; is ineffective in Ansible roles, only working within sessions. This requires repeatedly adding this option in test and subsequent tasks to ensure the next test runs even if the previous one fails. How can we avoid overusing ignore_errors and skip tests if pre-tasks fail?&lt;/p&gt;</description></item><item><title>How to pass data in JSON format in config map to the microservice</title><link>https://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</link><pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/pass-data-in-json/pass-data-in-json/</guid><description>&lt;!-- markdownlint-disable MD010 --&gt;
+&lt;p&gt;When we have little data need to pass from helm chart to service, it quit easy to use the &lt;code&gt;container.env&lt;/code&gt; part in the &lt;code&gt;deployment.yaml&lt;/code&gt;. So that we could just &lt;code&gt;os.getEnv()&lt;/code&gt; in the code, we got the value we want.&lt;/p&gt;</description></item><item><title>Kubernetes probes and pod lifecycle</title><link>https://localhost:1313/blog/kubernetes-pods-lifecycle/</link><pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/kubernetes-pods-lifecycle/</guid><description>&lt;ul&gt;
+&lt;li&gt;Readiness and Liveness probe
 &lt;a
 href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#before-you-begin"
 target="_blank"
->Configure Liveness, Readiness and Startup Probes | Kubernetes&lt;/a>
-&lt;ul>
-&lt;li>The &lt;a
+&gt;Configure Liveness, Readiness and Startup Probes | Kubernetes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a
 href="https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/"
 target="_blank"
->kubelet&lt;/a> uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.&lt;/li>
-&lt;li>The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.&lt;/li>
-&lt;li>The readiness check will continuously run in the pod lifecycle.
-&lt;blockquote>
-&lt;p>As long as Liveness Probe passed, the pod status changed to &lt;code>running&lt;/code>. If you want to connect to a pod when it is ready for traffic, it is better to check the &lt;code>ready&lt;/code> keywords.&lt;/p></description></item></channel></rss>
+&gt;kubelet&lt;/a&gt; uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.&lt;/li&gt;
+&lt;li&gt;The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.&lt;/li&gt;
+&lt;li&gt;The readiness check will continuously run in the pod lifecycle.
+&lt;blockquote&gt;
+&lt;p&gt;As long as Liveness Probe passed, the pod status changed to &lt;code&gt;running&lt;/code&gt;. If you want to connect to a pod when it is ready for traffic, it is better to check the &lt;code&gt;ready&lt;/code&gt; keywords.&lt;/p&gt;</description></item></channel></rss>

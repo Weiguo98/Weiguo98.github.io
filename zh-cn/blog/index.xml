@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Wei的博客</title><link>https://localhost:1313/zh-cn/blog/</link><description>Recent content in Blogs on Wei的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 郭巍</copyright><lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost:1313/zh-cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>欧洲旅游经验分享</title><link>https://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</link><pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate><guid>https://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</guid><description>&lt;p>对于很多其他地方的人来说，欧洲旅行都是很令人向往的。但是周游欧洲所有国家，因为时间和金钱的原因，可能是很不现实的。
-作为欧洲留子，在这里基于自己的旅游经验，给大家做一点推荐.&lt;/p>
-&lt;h2 class="relative group">第一梯队
-&lt;div id="第一梯队" class="anchor">&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Wei的博客</title><link>https://localhost:1313/zh-cn/blog/</link><description>Recent content in Blogs on Wei的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 郭巍</copyright><lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost:1313/zh-cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>欧洲旅游经验分享</title><link>https://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</link><pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate><guid>https://localhost:1313/zh-cn/blog/euro-tourist/euro-tourist/</guid><description>&lt;p&gt;对于很多其他地方的人来说，欧洲旅行都是很令人向往的。但是周游欧洲所有国家，因为时间和金钱的原因，可能是很不现实的。
+作为欧洲留子，在这里基于自己的旅游经验，给大家做一点推荐.&lt;/p&gt;
+&lt;h2 class="relative group"&gt;第一梯队
+&lt;div id="第一梯队" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e6%a2%af%e9%98%9f" aria-label="锚点">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;h3 class="relative group">匈牙利/捷克
-&lt;div id="匈牙利捷克" class="anchor">&lt;/div>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e6%a2%af%e9%98%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 class="relative group"&gt;匈牙利/捷克
+&lt;div id="匈牙利捷克" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%8c%88%e7%89%99%e5%88%a9%e6%8d%b7%e5%85%8b" aria-label="锚点">#&lt;/a>
-&lt;/span>
-&lt;/h3>
-&lt;p>推荐理由：物价相对较低，城市非常具有刻板印象中的欧洲风情，博物馆、皇宫、教堂都非常的漂亮。&lt;/p></description></item><item><title>Ansible complex set up error handling</title><link>https://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</link><pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate><guid>https://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</guid><description>&lt;p>在使用Ansible进行环境配置时，处理错误是一个关键问题，尽管有&lt;code>ignore_errors&lt;/code>和&lt;code>fails_when&lt;/code>两个keyword支持，但他们只能应用在具体的task，不能应用在role/整个playbook上。本文将介绍如何在复杂设置中如何更好的处理错误，特别是对于应用ansible在测试的情况下。&lt;/p>
-&lt;h3 class="relative group">问题描述
-&lt;div id="问题描述" class="anchor">&lt;/div>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%8c%88%e7%89%99%e5%88%a9%e6%8d%b7%e5%85%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;推荐理由：物价相对较低，城市非常具有刻板印象中的欧洲风情，博物馆、皇宫、教堂都非常的漂亮。&lt;/p&gt;</description></item><item><title>Ansible complex set up error handling</title><link>https://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</link><pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate><guid>https://localhost:1313/zh-cn/blog/ansible-ignore-errors/ansible-ignore-errors/</guid><description>&lt;p&gt;在使用Ansible进行环境配置时，处理错误是一个关键问题，尽管有&lt;code&gt;ignore_errors&lt;/code&gt;和&lt;code&gt;fails_when&lt;/code&gt;两个keyword支持，但他们只能应用在具体的task，不能应用在role/整个playbook上。本文将介绍如何在复杂设置中如何更好的处理错误，特别是对于应用ansible在测试的情况下。&lt;/p&gt;
+&lt;h3 class="relative group"&gt;问题描述
+&lt;div id="问题描述" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" aria-label="锚点">#&lt;/a>
-&lt;/span>
-&lt;/h3>
-&lt;p>ignore_errors=true在Ansible角色中不起作用，只在会话中有效。需要在测试任务和后续任务中多次添加此选项，以确保如果测试或者仅仅是不能够获取日志，下一个测试仍然可以运行。那如何更好的处理这种情况避免滥用&lt;code>ignore_errors&lt;/code> 以及如果某个测试的预处理任务失败了，该测试可以被跳过，而不是被执行？&lt;/p>
-&lt;p>解决方案是，可以重构测试用例，使用&lt;code>block&lt;/code>、&lt;code>rescue&lt;/code>、&lt;code>always&lt;/code>和&lt;code>clear_host_errors&lt;/code>。
-以下是一个可以工作的示例：&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-ansible" data-lang="ansible">- block:
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;ignore_errors=true在Ansible角色中不起作用，只在会话中有效。需要在测试任务和后续任务中多次添加此选项，以确保如果测试或者仅仅是不能够获取日志，下一个测试仍然可以运行。那如何更好的处理这种情况避免滥用&lt;code&gt;ignore_errors&lt;/code&gt; 以及如果某个测试的预处理任务失败了，该测试可以被跳过，而不是被执行？&lt;/p&gt;
+&lt;p&gt;解决方案是，可以重构测试用例，使用&lt;code&gt;block&lt;/code&gt;、&lt;code&gt;rescue&lt;/code&gt;、&lt;code&gt;always&lt;/code&gt;和&lt;code&gt;clear_host_errors&lt;/code&gt;。
+以下是一个可以工作的示例：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-ansible" data-lang="ansible"&gt;- block:
 - name: Pre tasks
 command: /bin/false
 - name: Test tasks
@@ -40,22 +40,22 @@ always:
 command: echo &amp;#34;post tasks&amp;#34;
 - name: Clear host errors
 meta: clear_host_errors
-&lt;/code>&lt;/pre>
-&lt;h3 class="relative group">详细说明
-&lt;div id="详细说明" class="anchor">&lt;/div>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 class="relative group"&gt;详细说明
+&lt;div id="详细说明" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e" aria-label="锚点">#&lt;/a>
-&lt;/span>
-&lt;/h3>
-&lt;p>1.使用ignore_errors
-在Ansible中，如果一个任务失败，Ansible默认会停止在该主机上执行任务。但是，你可以使用ignore_errors来忽略错误并继续执行。例如：&lt;/p></description></item><item><title>如何在配置映射中以 JSON 格式传递数据到微服务</title><link>https://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</link><pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate><guid>https://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</guid><description>&lt;p>当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 &lt;code>deployment.yaml&lt;/code> 中使用 &lt;code>container.env&lt;/code> 部分。这样我们只需在代码中使用 &lt;code>os.getEnv()&lt;/code>就能获取我们想要的值。&lt;/p>
-&lt;p>但是如果我们有大量的值需要传递，将它们全部添加到 Helm Chart 中会很混乱。这时，我们可以使用配置映射。个人更喜欢使用 JSON 格式，因为它易于解组为结构体，并且可以轻松访问所有值。&lt;/p>
-&lt;p>以下是通过配置映射传递数据的具体步骤：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>使用 JSON 格式的数据设置一个配置映射。&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-helm" data-lang="helm">apiVersion: &amp;#34;v1&amp;#34;
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;1.使用ignore_errors
+在Ansible中，如果一个任务失败，Ansible默认会停止在该主机上执行任务。但是，你可以使用ignore_errors来忽略错误并继续执行。例如：&lt;/p&gt;</description></item><item><title>如何在配置映射中以 JSON 格式传递数据到微服务</title><link>https://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</link><pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate><guid>https://localhost:1313/zh-cn/blog/pass-data-in-json/pass-data-in-json/</guid><description>&lt;p&gt;当我们需要从 Helm Chart 向服务传递少量数据时，可以很容易地在 &lt;code&gt;deployment.yaml&lt;/code&gt; 中使用 &lt;code&gt;container.env&lt;/code&gt; 部分。这样我们只需在代码中使用 &lt;code&gt;os.getEnv()&lt;/code&gt;就能获取我们想要的值。&lt;/p&gt;
+&lt;p&gt;但是如果我们有大量的值需要传递，将它们全部添加到 Helm Chart 中会很混乱。这时，我们可以使用配置映射。个人更喜欢使用 JSON 格式，因为它易于解组为结构体，并且可以轻松访问所有值。&lt;/p&gt;
+&lt;p&gt;以下是通过配置映射传递数据的具体步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 JSON 格式的数据设置一个配置映射。&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-helm" data-lang="helm"&gt;apiVersion: &amp;#34;v1&amp;#34;
 kind: &amp;#34;ConfigMap&amp;#34;
 metadata:
 name: json-configmap
@@ -65,6 +65,6 @@ config.json: |
 &amp;#34;key1&amp;#34;: &amp;#34;value1&amp;#34;,
 &amp;#34;key2&amp;#34;: &amp;#34;value2&amp;#34;
 }
-&lt;/code>&lt;/pre>&lt;/li>
-&lt;li>
-&lt;p>在 Pod 中创建一个卷并将其挂载到我们想要的容器中。&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 Pod 中创建一个卷并将其挂载到我们想要的容器中。&lt;/p&gt;</description></item></channel></rss>

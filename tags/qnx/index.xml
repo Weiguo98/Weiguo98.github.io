@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>QNX on Wei's Home</title><link>https://localhost:1313/tags/qnx/</link><description>Recent content in QNX on Wei's Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor><webMaster>guow1227@gmail.com (Wei Guo)</webMaster><copyright>© 2025 Wei Guo</copyright><lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost:1313/tags/qnx/index.xml" rel="self" type="application/rss+xml"/><item><title>Security Policy in QNX</title><link>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</link><pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid><description>&lt;h2 class="relative group">What is security policy?
-&lt;div id="what-is-security-policy" class="anchor">&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>QNX on Wei's Home</title><link>https://localhost:1313/tags/qnx/</link><description>Recent content in QNX on Wei's Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>guow1227@gmail.com (Wei Guo)</managingEditor><webMaster>guow1227@gmail.com (Wei Guo)</webMaster><copyright>© 2025 Wei Guo</copyright><lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost:1313/tags/qnx/index.xml" rel="self" type="application/rss+xml"/><item><title>Security Policy in QNX</title><link>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</link><pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate><author>guow1227@gmail.com (Wei Guo)</author><guid>https://localhost:1313/blog/qnx-secpol/qnx-secpol/</guid><description>&lt;h2 class="relative group"&gt;What is security policy?
+&lt;div id="what-is-security-policy" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#what-is-security-policy" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Official documents: &lt;a
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#what-is-security-policy" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;Official documents: &lt;a
 href="https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html"
 target="_blank"
->https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html&lt;/a>&lt;/p>
-&lt;p>It basically is a file that in a system level set processes which operations it is permitted to do.&lt;/p></description></item></channel></rss>
+&gt;https://www.qnx.com/developers/docs/7.1/index.html#com.qnx.doc.security.system/topic/manual/security_policies.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It basically is a file that in a system level set processes which operations it is permitted to do.&lt;/p&gt;</description></item></channel></rss>
