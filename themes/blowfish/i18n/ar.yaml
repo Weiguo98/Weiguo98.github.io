@@ -24,8 +24,12 @@ article:
   part_of_series: "هذا المقال جزء من سلسلة."
   part: "جزء"
   this_article: "هذه المقالة"
+  related_articles: "مقالات ذات صلة"
+  reply_by_email: "الرد عبر البريد الإلكتروني"
+  reply_to: "رد على {{ .Title }}"
 
 a11y:
+  title: "إعدادات إمكانية الوصول"
   disable_blur: "تعطيل التمويه"
   disable_images: "تعطيل الصور"
   show_link_underline: "إظهار خط تحت الروابط"
@@ -75,3 +79,13 @@ shortcode:
 
 recent:
   show_more: "قراءة المزيد"
+
+cookie_notice:
+  message_with_link: "يستخدم هذا الموقع ملفات تعريف الارتباط وتقنيات مشابهة. اقرأ سياسة الخصوصية الخاصة بنا"
+  message: "يستخدم هذا الموقع ملفات تعريف الارتباط وتقنيات مشابهة. باستخدامك لهذا الموقع، فإنك توافق على ذلك."
+  privacy_policy: "سياسة الخصوصية الخاصة بنا"
+  button: "فهمت"
+  image_alt: "أيقونة ملف تعريف الارتباط"
+
+kofi:
+  support_me: "ادعمني"

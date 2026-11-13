@@ -19,8 +19,11 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+  reply_by_email: "השב בדוא\"ל"
+  reply_to: "תגובה ל-{{ .Title }}"
 
 a11y:
+  title: "הגדרות נגישות"
   disable_blur: "השבת טשטוש"
   disable_images: "השבת תמונות"
   show_link_underline: "הצג קו תחתון לקישורים"
@@ -70,3 +73,13 @@ shortcode:
 
 recent:
   show_more: "להראות יותר"
+
+cookie_notice:
+  message_with_link: "אתר זה משתמש בעוגיות ובטכנולוגיות דומות. קראו את מדיניות הפרטיות שלנו"
+  message: "אתר זה משתמש בעוגיות ובטכנולוגיות דומות. בשימוש באתר זה, אתם מסכימים לכך."
+  privacy_policy: "מדיניות הפרטיות שלנו"
+  button: "הבנתי"
+  image_alt: "סמל קובץ Cookie"
+
+kofi:
+  support_me: "תמכו בי"

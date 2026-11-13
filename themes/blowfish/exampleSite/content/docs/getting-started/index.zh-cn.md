@@ -13,26 +13,21 @@ series_order: 3
 本节内容需要已经阅读了 [安装 Blowfish 主题]({{< ref "docs/installation" >}})。
 {{< /alert >}}
 
-</br>
-{{< alert "fire" >}}
-我们刚刚推出了一个 CLI 工具，用来帮助你快速开始 Blowfish。 它将帮助你安装和配置 Blowfish 主题。 可以使用以下命令全局安装 CLI 工具：
-```bash
-npx blowfish-tools
-```
+{{< alert "wand-magic-sparkles" >}}
+在使用 AI 编程智能体？Blowfish 附带一个**智能体技能**，可以教 Claude Code 等智能体如何安装、配置和使用本主题 — 请参阅[安装页面]({{< ref "docs/installation" >}})进行设置。
 {{< /alert >}}
-
 
 Blowfish 中的配置文件中包含了主题需要的所有可能的设置选项。但默认情况下大多数设置都是被注释的，你只需要取消注释就可以激活或者修改设定选项。
 
 ## 基础设置
 
-在刚刚安装完成，创建内容之前，有几个设置需要关注。从 `hugo.toml` 开始，设置 `baseURL` 和 `languageCode` 参数。`languageCode`参数是用来指定你创作内容的主要语言。
+在刚刚安装完成，创建内容之前，有几个设置需要关注。从 `hugo.toml` 开始，设置 `baseURL` 和 `locale` 参数。`locale`参数是用来指定你创作内容的主要语言。
 
 ```toml
 # config/_default/hugo.toml
 
 baseURL = "https://your_domain.com/"
-languageCode = "en"
+locale = "en"
 ```
 
 下一步是设置语言。尽管 Blowfish 支持多语言，但是 `hugo.toml` 只能配置一个主语言。
@@ -40,7 +35,7 @@ languageCode = "en"
 在 `config/_default` 文件夹中找到 `languages.en.toml`。如果你的主语言是英语，你可以直接使用此文件。否则需要重命名为主语言对应的文件名。例如，如果主语言是法语，那么需要将文件命名为 `languages.fr.toml`。
 
 {{< alert >}}
-注意：语言配置文件名中的语言代码需要与 `hugo.toml` 中 `languageCode` 相匹配。
+注意：语言配置文件名中的语言代码需要与 `hugo.toml` 中 `locale` 相匹配。
 {{< /alert >}}
 
 ```toml
@@ -64,57 +59,11 @@ links = [
 
 ## 颜色方案
 
-Blowfish 主题中包含了数个颜色方案，这些方案可以快速使用。如果需要修改方案，只需要简单的设置 `colorScheme` 参数即可。`colorScheme` 可选的值有`blowfish` （默认）、`avocado`、`fire`、`ocean`、`forest`、`princess`、`neon`、`bloody`、`terminal`、`marvel`、`noir`、`autumn`、`congo`和`slate`。
+Blowfish 提供多种预设配色方案。你可以在下面测试可用的配色方案：
 
-```toml
-# config/_default/params.toml
+{{< theme-switcher >}}
 
-colorScheme = "blowfish"
-```
-
-Blowfish 定义了一种由三种主色调构成的配色方案，每种主色调包含了10种子色调，10个色调是借鉴 [Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference) 中的定义。Blowfish 中定义了多个预置的三色主题，以便在整个主题中使用。
-
-#### Blowfish（默认）
-{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
-
-#### Avocado
-{{< swatches "#78716c" "#84cc16" "#10b981" >}}
-
-#### Fire
-{{< swatches "#78716c" "#f97316" "#f43f5e" >}}
-
-#### Ocean
-{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
-
-#### Forest
-{{< swatches "#658c86" "#3bf5df" "#06d45c" >}}
-
-#### Princess
-{{< swatches "#8c658c" "#f53bf2" "#7706d4" >}}
-
-#### Neon
-{{< swatches "#8338ec" "#ff006e" "#3a86ff" >}}
-
-#### Bloody
-{{< swatches "#d90429" "#8d99ae" "#457b9d" >}}
-
-#### Terminal
-{{< swatches "#004b23" "#38b000" "#1a759f" >}}
-
-#### Marvel
-{{< swatches "#2541b2" "#d81159" "#ffbc42" >}}
-
-#### Noir
-{{< swatches "#5c6b73" "#9db4c0" "#00a5cf" >}}
-
-#### Autumn
-{{< swatches "#0a9396" "#ee9b00" "#bb3e03" >}}
-
-#### Congo
-{{< swatches "#71717a" "#8b5cf6" "#d946ef" >}}
-
-#### Slate
-{{< swatches "#6B7280" "#64748b" "#6B7280" >}}
+Blowfish 中的每个配色方案均基于三色调色板，并在整个主题中保持一致应用。这些主色基于 [Tailwind CSS](https://tailwindcss.com/docs/customizing-colors#color-palette-reference) 所提供的十阶色板构建。
 
 这些是内置的配色方案，你也可以去自定义这一部分，请参阅 [高级自定义]({{< ref "advanced-customisation#colour-schemes" >}}) 。
 
@@ -269,4 +218,3 @@ Blowfish 还支持在文章和列表中使用背景图。为了使与缩略图�
 ## 详细配置
 
 上面的步骤介绍了最基本的配置。如果你现在运行 `hugo server`，你将会看到一个空白的 Blowfish 网站。更加详细的内容在[配置]({{< ref "configuration" >}})中介绍。
-

@@ -1,6 +1,7 @@
 {{ define "main" }}
-  {{ .Scratch.Set "scope" "list" }}
-  {{ if site.Params.taxonomy.showHero | default false }}
+  {{ .Scratch.Set "scope" "terms" }}
+  {{ $showHero := .Params.showHero | default site.Params.taxonomy.showHero | default false }}
+  {{ if $showHero }}
     {{ $heroStyle := print "hero/" site.Params.taxonomy.heroStyle ".html" }}
     {{ if templates.Exists ( printf "partials/%s" $heroStyle ) }}
       {{ partial $heroStyle . }}
@@ -10,7 +11,7 @@
   {{- end -}}
 
 
-  <header>
+  <header class="mt-5">
     {{ if .Params.showBreadcrumbs | default (site.Params.taxonomy.showBreadcrumbs | default false) }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
@@ -25,14 +26,6 @@
         {{ .Content }}
       </div>
     </section>
-    {{ $jsPage := resources.Get "js/page.js" }}
-    {{ $jsPage = $jsPage | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
-    <script
-      type="text/javascript"
-      src="{{ $jsPage.RelPermalink }}"
-      integrity="{{ $jsPage.Data.Integrity }}"
-      data-oid="views_taxonomy_{{ .Data.Plural }}"
-      data-oid-likes="likes_taxonomy_{{ .Data.Plural }}"></script>
   {{ end }}
 
   {{ if site.Params.taxonomy.cardView }}
@@ -43,11 +36,10 @@
     </section>
   {{ else }}
 
-    <section class="flex flex-wrap max-w-prose -mx-2 overflow-hidden">
+    <section class="mt-6 flex max-w-prose flex-wrap gap-2">
       {{ range .Data.Terms }}
         {{ partial "term-link/text.html" . }}
       {{ end }}
     </section>
   {{ end }}
-
 {{ end }}

@@ -13,25 +13,21 @@ series_order: 3
 このセクションでは、[Blowfish テーマをすでにインストールしている]({{< ref "docs/installation" >}})ことを前提としています。
 {{< /alert >}}
 
-</br>
-{{< alert "fire" >}}
-Blowfish の使用開始を支援する CLI ツールをリリースしました。インストールと設定に役立ちます。次のコマンドで CLI ツールをグローバルにインストールします。
-```bash
-npx blowfish-tools
-```
+{{< alert "wand-magic-sparkles" >}}
+AI コーディングエージェントを使っていますか？Blowfish には、Claude Code などのエージェントにテーマのインストール・設定・活用方法を教える**エージェントスキル**が付属しています。セットアップ方法は[インストールページ]({{< ref "docs/installation" >}})をご覧ください。
 {{< /alert >}}
 
 Blowfish に同梱されている設定ファイルには、テーマが認識できるすべての設定が含まれています。デフォルトでは、これらの多くはコメントアウトされていますが、コメントを解除するだけで特定の機能を有効化または変更できます。
 
 ## 基本設定
 
-コンテンツを作成する前に、新しいインストール用に設定する必要があるものがいくつかあります。まず、`hugo.toml` ファイルで、`baseURL` と `languageCode` パラメータを設定します。`languageCode` は、コンテンツの作成に使用する主要言語に設定する必要があります。
+コンテンツを作成する前に、新しいインストール用に設定する必要があるものがいくつかあります。まず、`hugo.toml` ファイルで、`baseURL` と `locale` パラメータを設定します。`locale` は、コンテンツの作成に使用する主要言語に設定する必要があります。
 
 ```toml
 # config/_default/hugo.toml
 
 baseURL = "https://your_domain.com/"
-languageCode = "ja"
+locale = "ja"
 ```
 
 次のステップは、言語設定です。Blowfish は多言語設定をサポートしていますが、ここではまず主要言語を設定します。
@@ -39,7 +35,7 @@ languageCode = "ja"
 設定フォルダで `languages.en.toml` ファイルを見つけます。主要言語が英語の場合は、このファイルをそのまま使用できます。それ以外の場合は、ファイル名に正しい言語コードが含まれるように名前を変更します。例えば日本語の場合は、`languages.ja.toml`にファイル名を変更します。
 
 {{< alert >}}
-言語設定ファイル名の言語コードは、`hugo.toml` の `languageCode` 設定と一致する必要があることに注意してください。
+言語設定ファイル名の言語コードは、`hugo.toml` の `locale` 設定と一致する必要があることに注意してください。
 {{< /alert >}}
 
 ```toml
@@ -63,57 +59,11 @@ links = [
 
 ## カラースキーム
 
-Blowfish には、すぐに使用できる多くのカラースキームが付属しています。スキームを変更するには、`colorScheme` テーマパラメータを設定するだけです。有効なオプションは、`blowfish` (デフォルト)、`avocado`、`fire`、`ocean`、`forest`、`princess`、`neon`、`bloody`、`terminal`、`marvel`、`noir`、`autumn`、`congo`、`slate` です。
+Blowfish には複数のカラースキームが用意されている。以下の組み込みスキームを試すことができます：
 
-```toml
-# config/_default/params.toml
+{{< theme-switcher >}}
 
-colorScheme = "blowfish"
-```
-
-Blowfish は、テーマ全体で使用される3色のパレットを定義しています。各メインカラーには、[Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference) に含まれる色に基づいた10の色合いが含まれています。3つのメインカラーは、ヘッダー、フッター、およびアクセントカラーに使用されます。各スキームの色は次のとおりです。
-
-#### Blowfish (デフォルト)
-{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
-
-#### Avocado
-{{< swatches "#78716c" "#84cc16" "#10b981" >}}
-
-#### Fire
-{{< swatches "#78716c" "#f97316" "#f43f5e" >}}
-
-#### Ocean
-{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
-
-#### Forest
-{{< swatches "#658c86" "#3bf5df" "#06d45c" >}}
-
-#### Princess
-{{< swatches "#8c658c" "#f53bf2" "#7706d4" >}}
-
-#### Neon
-{{< swatches "#8338ec" "#ff006e" "#3a86ff" >}}
-
-#### Bloody
-{{< swatches "#d90429" "#8d99ae" "#457b9d" >}}
-
-#### Terminal
-{{< swatches "#004b23" "#38b000" "#1a759f" >}}
-
-#### Marvel
-{{< swatches "#2541b2" "#d81159" "#ffbc42" >}}
-
-#### Noir
-{{< swatches "#5c6b73" "#9db4c0" "#00a5cf" >}}
-
-#### Autumn
-{{< swatches "#0a9396" "#ee9b00" "#bb3e03" >}}
-
-#### Congo
-{{< swatches "#71717a" "#8b5cf6" "#d946ef" >}}
-
-#### Slate
-{{< swatches "#6B7280" "#64748b" "#6B7280" >}}
+Blowfish の各カラースキームは三色のパレットに基づき、テーマ全体で一貫して使用される。各主色は [Tailwind CSS](https://tailwindcss.com/docs/customizing-colors#color-palette-reference) に含まれる十段階のカラーパレットを基礎として構成される。
 
 これらはデフォルトのスキームですが、独自のスキームを作成することもできます。詳細については、[高度なカスタマイズ]({{< ref "advanced-customisation#colour-schemes" >}})セクションを参照してください。
 

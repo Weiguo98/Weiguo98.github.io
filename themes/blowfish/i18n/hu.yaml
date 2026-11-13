@@ -19,8 +19,11 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+  reply_by_email: "Válasz emailben"
+  reply_to: "Válasz erre: {{ .Title }}"
 
 a11y:
+  title: "Akadálymentességi beállítások"
   disable_blur: "Elmosódás kikapcsolása"
   disable_images: "Képek kikapcsolása"
   show_link_underline: "Link aláhúzásának megjelenítése"
@@ -70,3 +73,13 @@ shortcode:
 
 recent:
   show_more: "Mutass Többet"
+
+cookie_notice:
+  message_with_link: "Ez a weboldal sütiket és hasonló technológiákat használ. Olvassa el adatvédelmi szabályzatunkat"
+  message: "Ez a weboldal sütiket és hasonló technológiákat használ. A weboldal használatával ezt elfogadja."
+  privacy_policy: "adatvédelmi tájékoztatónkat"
+  button: "Rendben"
+  image_alt: "Süti ikon"
+
+kofi:
+  support_me: "Támogass engem"

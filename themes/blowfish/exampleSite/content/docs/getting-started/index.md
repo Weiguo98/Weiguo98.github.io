@@ -3,6 +3,7 @@ title: "Getting Started"
 weight: 3
 draft: false
 description: "All the front matter variables available in Blowfish."
+featureimage: "images/v3/publishing.png"
 slug: "getting-started"
 tags: ["installation", "docs"]
 series: ["Documentation"]
@@ -13,26 +14,21 @@ series_order: 3
 This section assumes you have already [installed the Blowfish theme]({{< ref "docs/installation" >}}).
 {{< /alert >}}
 
-</br>
-{{< alert "fire" >}}
-We just launched a CLI tool to help you get started with Blowfish. It will help you with installation and configuration. Install the CLI tool globally using:
-```bash
-npx blowfish-tools
-```
+{{< alert "wand-magic-sparkles" >}}
+Working with an AI coding agent? Blowfish ships an **agent skill** that teaches agents like Claude Code how to install, configure, and build with the theme — see the [installation page]({{< ref "docs/installation" >}}) to set it up.
 {{< /alert >}}
-
 
 The config files that ship with Blowfish contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
 
 ## Basic configuration
 
-Before creating any content, there are a few things you should set for a new installation. Starting in the `hugo.toml` file, set the `baseURL` and `languageCode` parameters. The `languageCode` should be set to the main language that you will be using to author your content.
+Before creating any content, there are a few things you should set for a new installation. Starting in the `hugo.toml` file, set the `baseURL` and `locale` parameters. The `locale` should be set to the main language that you will be using to author your content.
 
 ```toml
 # config/_default/hugo.toml
 
 baseURL = "https://your_domain.com/"
-languageCode = "en"
+locale = "en"
 ```
 
 The next step is to configure the language settings. Although Blowfish supports multilingual setups, for now, just configure the main language.
@@ -40,7 +36,7 @@ The next step is to configure the language settings. Although Blowfish supports 
 Locate the `languages.en.toml` file in the config folder. If your main language is English you can use this file as is. Otherwise, rename it so that it includes the correct language code in the filename. For example, for French, rename the file to `languages.fr.toml`.
 
 {{< alert >}}
-Note that the language code in the language config filename should match the `languageCode` setting in `hugo.toml`.
+Note that the language code in the language config filename should match the `locale` setting in `hugo.toml`.
 {{< /alert >}}
 
 ```toml
@@ -64,58 +60,11 @@ If you need extra detail, further information about each of these configuration 
 
 ## Colour schemes
 
-Blowfish ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `blowfish` (default), `avocado`, `fire`, `ocean`, `forest`, `princess`, `neon`, `bloody`, `terminal`, `marvel`, `noir`, `autumn`, `congo`, and`slate`.
+Blowfish ships with a number of colour schemes out of the box. You can try out the built-in schemes below:
 
-```toml
-# config/_default/params.toml
+{{< theme-switcher >}}
 
-colorScheme = "blowfish"
-```
-
-Blowfish defines a three-colour palette that is used throughout the theme. Each main colour contains ten shades which are based upon the colours that are included in [Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference). The three main colours are used for the header, footer, and accent colours. Here are the colors for each scheme:
-
-#### Blowfish (default)
-{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
-
-#### Avocado
-{{< swatches "#78716c" "#84cc16" "#10b981" >}}
-
-#### Fire
-{{< swatches "#78716c" "#f97316" "#f43f5e" >}}
-
-#### Ocean
-{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
-
-#### Forest
-{{< swatches "#658c86" "#3bf5df" "#06d45c" >}}
-
-#### Princess
-{{< swatches "#8c658c" "#f53bf2" "#7706d4" >}}
-
-#### Neon
-{{< swatches "#8338ec" "#ff006e" "#3a86ff" >}}
-
-#### Bloody
-{{< swatches "#d90429" "#8d99ae" "#457b9d" >}}
-
-#### Terminal
-{{< swatches "#004b23" "#38b000" "#1a759f" >}}
-
-#### Marvel
-{{< swatches "#2541b2" "#d81159" "#ffbc42" >}}
-
-#### Noir
-{{< swatches "#5c6b73" "#9db4c0" "#00a5cf" >}}
-
-#### Autumn
-{{< swatches "#0a9396" "#ee9b00" "#bb3e03" >}}
-
-#### Congo
-{{< swatches "#71717a" "#8b5cf6" "#d946ef" >}}
-
-#### Slate
-{{< swatches "#6B7280" "#64748b" "#6B7280" >}}
-
+Each colour scheme in Blowfish is built upon a three-colour palette that is used consistently throughout the theme. Each of these main colours is based on the ten-shade colour palettes included in [Tailwind CSS](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
 
 Although these are the default schemes, you can also create your own. Refer to the [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) section for details.
 
@@ -261,7 +210,7 @@ The default `name` is the `pageRef` title cased.
 
 ## Thumbnails & Backgrounds
 
-Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article structure, you just need to place an image file (almost all formats are supported but we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then be able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
+Blowfish was built so it would be easy to add visual support to your articles. If you're familiar with Hugo article structure, you just need to place an image file (almost all formats are supported but we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then be able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms.
 
 [Here]({{< ref "thumbnails" >}}) is also a guide with more info and a [sample]({{< ref "thumbnail_sample" >}}) if you want to see how you can do it.
 

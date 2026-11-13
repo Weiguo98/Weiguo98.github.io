@@ -1,49 +1,15 @@
 const fs = require("fs/promises");
 const crypto = require("crypto");
 const puppeteer = require("puppeteer");
-const translate = require("@iamtraction/google-translate");
 
 const configDir = "./exampleSite/config/_default";
 const defaultLang = "en";
 const usersFolderPath = "./exampleSite/content/users/";
 
-let cache = {};
-
-function generateDirName(seed) {
+function generateDirName(seed, index) {
   const hash = crypto.createHash("md5");
   hash.update(seed);
-  return hash.digest("hex");
-}
-
-async function convert(text, from, to) {
-  const options = { from, to };
-  if (!cache[to]) cache[to] = {};
-  if (cache[to][text]) return cache[to][text];
-  const translated_text = await translate(text, options);
-  cache[to][text] = translated_text.text;
-  return translated_text.text;
-}
-
-async function translateFrontMatterTags(block, targetLang, tags) {
-  const array = block.split("\n");
-  let translatedBlock = "";
-  for (const line of array) {
-    let newElement = line;
-    if (line.indexOf(":") > -1) {
-      const elements = line.split(":");
-      if (elements[0].indexOf("tags") != -1) {
-        const translatedTags = [];
-        for (const tag of tags) {
-          const tempTag = await convert(tag, defaultLang, targetLang);
-          translatedTags.push(tempTag);
-        }
-        const trasnlatedTagsString = translatedTags.join(", ");
-        newElement = elements[0] + ": [" + trasnlatedTagsString + "]";
-      }
-    }
-    translatedBlock += newElement + "\n";
-  }
-  return translatedBlock;
+  return index + "-" + hash.digest("hex");
 }
 
 (async () => {
@@ -72,8 +38,10 @@ async function translateFrontMatterTags(block, targetLang, tags) {
   const rawdata = await fs.readFile(usersFolderPath + "users.json", "utf8");
   const users = JSON.parse(rawdata);
   const userDict = {};
+  var index = 0;
   for (const user of users) {
-    userDict[generateDirName(user.url)] = true;
+    userDict[generateDirName(user.url, index)] = true;
+    index++;
   }
 
   const files = await fs.readdir(usersFolderPath);
@@ -117,22 +85,27 @@ async function translateFrontMatterTags(block, targetLang, tags) {
       "                layoutBackgroundHeaderSpace: false\n" +
       "                \r---\n";
 
-    const dir = usersFolderPath + generateDirName(user.url);
+    const dir = usersFolderPath + generateDirName(user.url, i);
 
     try {
       await fs.access(dir);
     } catch {
       await fs.mkdir(dir);
-    }
+    
 
     console.log(i, user.title, dir);
     await fs.writeFile(dir + "/index.md", userMDFile);
     for (const lang of targetLangs) {
-      const content = await translateFrontMatterTags(userMDFile, lang, user.tags);
-      await fs.writeFile(dir + `/index.${lang}.md`, content);
+      await fs.writeFile(dir + `/index.${lang}.md`, userMDFile);
     }
-    await page.goto(user.url);
-    await page.screenshot({ path: dir + "/feature.jpg", type: "webp", quality: 50 });
+    try {
+      await page.goto(user.url, { waitUntil: "load", timeout: 30000 });
+    } catch (err) {
+      console.warn(`  warning: ${user.url} did not finish loading (${err.message}); taking screenshot anyway`);
+    }
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    await page.screenshot({ path: dir + "/feature.webp", type: "webp", quality: 50 });
+    }
   }
 
 

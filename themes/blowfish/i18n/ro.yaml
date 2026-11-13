@@ -19,8 +19,11 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+  reply_by_email: "Răspunde prin email"
+  reply_to: "Răspuns la {{ .Title }}"
 
 a11y:
+  title: "Setări de accesibilitate"
   disable_blur: "Dezactivează estomparea"
   disable_images: "Dezactivează imaginile"
   show_link_underline: "Afișează sublinierea linkurilor"
@@ -70,3 +73,13 @@ shortcode:
 
 recent:
   show_more: "Afișați mai multe"
+
+cookie_notice:
+  message_with_link: "Acest site folosește cookie-uri și tehnologii similare. Citiți politica noastră de confidențialitate"
+  message: "Acest site folosește cookie-uri și tehnologii similare. Prin utilizarea acestui site, acceptați acest lucru."
+  privacy_policy: "politica noastră de confidențialitate"
+  button: "Am înțeles"
+  image_alt: "Pictogramă cookie"
+
+kofi:
+  support_me: "Susține-mă"

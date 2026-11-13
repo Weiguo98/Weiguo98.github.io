@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "term" }}
-  {{ if site.Params.term.showHero | default false }}
+  {{ $showHero := .Params.showHero | default site.Params.term.showHero | default false }}
+  {{ if $showHero }}
     {{ $heroStyle := print "hero/" site.Params.term.heroStyle ".html" }}
     {{ if templates.Exists ( printf "partials/%s" $heroStyle ) }}
       {{ partial $heroStyle . }}
@@ -10,7 +11,7 @@
   {{- end -}}
 
 
-  <header>
+  <header class="mt-5">
     {{ if .Params.showBreadcrumbs | default (site.Params.term.showBreadcrumbs | default false) }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
@@ -25,14 +26,6 @@
       <div class="min-w-0 min-h-0 max-w-prose">
         {{ .Content }}
       </div>
-      {{ $jsPage := resources.Get "js/page.js" }}
-      {{ $jsPage = $jsPage | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
-      <script
-        type="text/javascript"
-        src="{{ $jsPage.RelPermalink }}"
-        integrity="{{ $jsPage.Data.Integrity }}"
-        data-oid="views_term_{{ .Data.Term }}"
-        data-oid-likes="likes_term_{{ .Data.Term }}"></script>
     {{ end }}
   </section>
 
@@ -86,7 +79,7 @@
       {{ if $groupByYear }}
 
         {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
-          <div class="relative w-screen max-w-[1600px] px-[30px] left-[calc(max(-50vw,-800px)+50%)]">
+          <div class="relative w-screen max-w-[1600px] px-[30px] start-[calc(max(-50vw,-800px)+50%)]">
             <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
               {{ .Key }}
             </h2>
@@ -100,7 +93,7 @@
 
       {{ else }}
 
-        <div class="relative w-screen max-w-[1600px] px-[30px] left-[calc(max(-50vw,-800px)+50%)]">
+        <div class="relative w-screen max-w-[1600px] px-[30px] start-[calc(max(-50vw,-800px)+50%)]">
           <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
             {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
               {{ range .Pages }}

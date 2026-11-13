@@ -1,20 +1,8 @@
 {{ $id := delimit (slice "carousel" (partial "functions/uid.html" .) (now.UnixNano)) "-" }}
-{{ $aspect := default "16-9" (.Get "aspectRatio") }}
+{{ $aspect := (split (.Get "aspectRatio") "-") }}
+{{ $aspectx := default "16" (index $aspect  0) }}
+{{ $aspecty := default "9" (index $aspect  1) }}
 {{ $interval := default "2000" (.Get "interval") }}
-
-{{ $carouselItemCSS := printf 
-`
-  #%s [data-twe-carousel-item] {
-  transition-duration: %sms !important;
-}` $id $interval }}
-{{ $carouselInitCSS := printf
-`
-#%s [data-twe-carousel-init] {
-  --twe-carousel-interval: %s;
-}` $id $interval }}
-{{ $cssContent := printf "%s%s" $carouselItemCSS $carouselInitCSS }}
-{{ $css := resources.FromString (printf "css/carousel-%s.css" $id) $cssContent | minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 {{ $page := .Page.Resources }}
 {{ $imagesTemp := .Get "images" }}
@@ -24,21 +12,40 @@
 {{ $images := slice }}
 {{ range $imagesTemp }}
   {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-    {{ $images = $images | append (resources.GetRemote .) }}
+    {{ $images = $images | append (dict "resource" (resources.GetRemote .) "key" .) }}
   {{ else }}
-    {{ $images = $images | append ($page.Match .) }}
+    {{ range ($page.Match .) }}
+      {{ $images = $images | append (dict "resource" . "key" .Name) }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
+{{ $captionsParam := .Get "captions" }}
+{{ $captions := dict }}
+{{ if $captionsParam }}
+  {{ $captionsTemp := strings.TrimPrefix "{" $captionsParam }}
+  {{ $captionsTemp = strings.TrimSuffix "}" $captionsTemp }}
+  {{ range (strings.Split $captionsTemp ",") }}
+    {{ $pair := strings.Split . ":" }}
+    {{ if ge (len $pair) 2 }}
+      {{ $key := strings.TrimSpace (index $pair 0) }}
+      {{ $value := strings.TrimSpace (delimit (after 1 $pair) ":") }}
+      {{ $captions = merge $captions (dict $key $value) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
+{{ if not .Parent }}<div class="width-patch"></div>{{ end }}
 <div
   id="{{ $id }}"
   class="relative"
+  style="container-type: inline-size;"
   data-twe-carousel-init
   data-twe-ride="carousel"
   data-twe-interval="{{ $interval }}">
   <div
-    class="absolute right-0 bottom-0 left-0 z-2 mx-[15%] mb-10 flex list-none justify-center p-0"
+    class="absolute right-0 left-0 z-2 mx-[15%] mb-10 flex list-none justify-center p-0"
+    style="top: calc(100cqi * {{ $aspecty }} / {{ $aspectx }} - 2.5rem);"
     data-twe-carousel-indicators>
     {{ $num := 0 }}
     {{ range $images }}
@@ -53,25 +60,50 @@
     {{ end }}
   </div>
 
-  <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+  <div
+    class="relative w-full after:clear-both after:block after:content-['']"
+    style="overflow-x: clip; overflow-y: visible;">
     {{ range $index, $image := $images }}
-      {{ $hiddenClass := cond (eq $index 0) "" "hidden" }}
-      <div
-        class="relative float-left -mr-[100%] {{ $hiddenClass }} w-full transition-transform ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        {{ if eq $index 0 }}data-twe-carousel-active{{ end }}>
-        <div class="ratio-{{ $aspect }} single_hero_background">
+    {{ $hiddenClass := cond (eq $index 0) "" "hidden" }}
+    {{ $resource := index $image "resource" }}
+    {{ $key := index $image "key" }}
+    {{ $caption := "" }}
+    {{ $candidates := slice }}
+    {{ if $resource }}
+    {{ $candidates = $candidates | append $resource.Name (path.Base $resource.Name) $resource.RelPermalink (path.Base $resource.RelPermalink) }}
+    {{ end }}
+    {{ if $key }}
+    {{ $candidates = $candidates | append $key (path.Base $key) }}
+    {{ end }}
+    {{ range $candidates }}
+    {{ if and (not $caption) . }}
+    {{ with (index $captions .) }}{{ $caption = . }}{{ end }}
+    {{ end }}
+    {{ end }}
+    <div
+      class="relative float-left -mr-[100%] {{ $hiddenClass }} w-full transition-transform ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item
+      style="transition-duration: {{ $interval }}ms;"
+      {{ if eq $index 0 }}data-twe-carousel-active{{ end }}>
+        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: {{ $aspectx }} / {{ $aspecty }};">
           <img
-            src="{{ $image.RelPermalink }}"
-            class="block absolute top-0 object-cover w-full h-full nozoom"
+            src="{{ $resource.RelPermalink }}"
+            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
             alt="carousel image {{ add $index 1 }}">
         </div>
-      </div>
+        {{ if or $caption $captionsParam }}
+        <figcaption
+          class="mt-1 {{ if not $caption }}invisible{{ end }}"
+          {{ if not $caption }}aria-hidden="true"{{ end }}
+        >{{ if $caption }}{{ $caption | markdownify }}{{ else }}&nbsp;{{ end }}</figcaption>
+        {{ end }}
+    </div>
     {{ end }}
   </div>
 
   <button
-    class="absolute top-0 bottom-0 left-0 z-2 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    class="absolute top-0 left-0 z-2 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    style="height: calc(100cqi * {{ $aspecty }} / {{ $aspectx }});"
     type="button"
     data-twe-target="#{{ $id }}"
     data-twe-slide="prev">
@@ -93,7 +125,8 @@
   </button>
 
   <button
-    class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    class="absolute top-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    style="height: calc(100cqi * {{ $aspecty }} / {{ $aspectx }});"
     type="button"
     data-twe-target="#{{ $id }}"
     data-twe-slide="next">
@@ -114,3 +147,36 @@
     >
   </button>
 </div>
+
+  {{ if $captionsParam }}
+  <script>
+    (() => {
+      const root = document.getElementById("{{ $id }}");
+      if (!root) return;
+
+      const items = Array.from(root.querySelectorAll("[data-twe-carousel-item]"));
+      const captions = items
+        .map((item) => item.querySelector("figcaption"))
+        .filter((caption) => caption);
+      if (captions.length < 2) return;
+
+      const measureAndFixCaptionHeight = () => {
+        const hiddenItems = items.filter((item) => item.classList.contains("hidden"));
+        hiddenItems.forEach((item) => item.classList.remove("hidden"));
+
+        const maxHeight = Math.max(
+          ...captions.map((caption) => Math.ceil(caption.getBoundingClientRect().height)),
+        );
+
+        hiddenItems.forEach((item) => item.classList.add("hidden"));
+        captions.forEach((caption) => {
+          caption.style.minHeight = `${maxHeight}px`;
+        });
+      };
+
+      window.requestAnimationFrame(measureAndFixCaptionHeight);
+      window.addEventListener("load", measureAndFixCaptionHeight, { once: true });
+      window.addEventListener("resize", measureAndFixCaptionHeight);
+    })();
+  </script>
+  {{ end }}

@@ -117,7 +117,7 @@ Next, create the following folder structure at the root of your code directory -
 
 ```md
 config/_default/
-├─ config.toml
+├─ hugo.toml
 ├─ languages.en.toml
 ├─ markup.toml
 ├─ menus.en.toml
@@ -126,7 +126,7 @@ config/_default/
 ```
 
 
-Open the **config.toml** and uncomment the line **theme = "blowfish”** and you are ready to go. Try the running the site again and check the result at _[https://localhost:1313](https://localhost:1313)_
+Open the **hugo.toml** and uncomment the line **theme = "blowfish”** and you are ready to go. Try the running the site again and check the result at _[https://localhost:1313](https://localhost:1313)_
 
 ```bash
 hugo server
@@ -262,10 +262,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh nisl, vulput
 You can create additional articles to see what your site will look like once there is content in it. Your site should look like the images below. The main page shows the recent articles, each article is connected through others automatically via related section, you have tag aggregation, and full-text search. 
 
 {{< gallery >}}
-  <img src="img/blowfishrecent.png" class="grid-w50" />
-  <img src="img/article.png" class="grid-w50" />
-  <img src="img/search.png" class="grid-w50" />
-  <img src="img/tag.png" class="grid-w50" />
+  <img alt="" src="img/blowfishrecent.png" class="grid-w50" />
+  <img alt="" src="img/article.png" class="grid-w50" />
+  <img alt="" src="img/search.png" class="grid-w50" />
+  <img alt="" src="img/tag.png" class="grid-w50" />
 {{< /gallery >}}
 
 

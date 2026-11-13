@@ -1,5 +1,6 @@
 ---
 title: "系列"
+featureimage: "images/v3/series.png"
 weight: 12
 draft: false
 description: "了解如何将文章分组到系列中。"
@@ -13,7 +14,7 @@ seriesOpened: true
 Blowfish 提供了将一组文章分组到“系列”下的功能。将文章放在系列下将在每个页面中显示该系列文章的其余部分，并在它们之间提供快速导航。您可以在上面看到一个例子。
 
 ## 创建分类
-启用系列的第一步是创建 `series` 分类法。为此，只需将 `series` 分类法添加到 `config.toml` 中的分类法列表中即可。
+启用系列的第一步是创建 `series` 分类法。为此，只需将 `series` 分类法添加到 `hugo.toml` 中的分类法列表中即可。
 
 ```toml
 [taxonomies]

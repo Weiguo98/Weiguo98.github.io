@@ -25,11 +25,14 @@ article:
   part: "ตอนที่"
   this_article: "บทความนี้"
   related_articles: "บทความที่เกี่ยวข้อง"
+  reply_by_email: "ตอบกลับทางอีเมล"
+  reply_to: "ตอบกลับ {{ .Title }}"
   zen_mode_title:
     enable: "เปิดโหมดเซน"
     disable: "ปิดโหมดเซน"
 
 a11y:
+  title: "การตั้งค่าการเข้าถึง"
   disable_blur: "ปิดการเบลอ"
   disable_images: "ปิดการแสดงรูปภาพ"
   show_link_underline: "แสดงเส้นใต้ลิงก์"
@@ -81,3 +84,13 @@ shortcode:
 
 recent:
   show_more: "แสดงเพิ่มเติม"
+
+cookie_notice:
+  message_with_link: "เว็บไซต์นี้ใช้คุกกี้และเทคโนโลยีที่คล้ายกัน อ่านนโยบายความเป็นส่วนตัวของเรา"
+  message: "เว็บไซต์นี้ใช้คุกกี้และเทคโนโลยีที่คล้ายกัน เมื่อคุณใช้เว็บไซต์นี้ แสดงว่าคุณยอมรับสิ่งนี้"
+  privacy_policy: "นโยบายความเป็นส่วนตัวของเรา"
+  button: "เข้าใจแล้ว"
+  image_alt: "ไอคอนคุกกี้"
+
+kofi:
+  support_me: "สนับสนุน"

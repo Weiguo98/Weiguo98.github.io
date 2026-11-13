@@ -88,11 +88,6 @@
 # the copyright notice. Configure as per the main menu above.
 
  [[footer]]
-   name = "Donate"
-   url = "https://www.buymeacoffee.com/nunocoracao"
-   weight = 10
-
- [[footer]]
    name = "Authors"
    pageRef = "authors"
    weight = 20

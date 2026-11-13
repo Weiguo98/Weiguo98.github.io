@@ -15,10 +15,28 @@ article:
   word_count:
     one: "{{ .Count }} Wort"
     other: "{{ .Count }} Wörter"
+  views:
+    one: "{{ .Count }} Ansicht"
+    other: "{{ .Count }} Ansichten"
+  likes:
+    one: "{{ .Count }} Like"
+    other: "{{ .Count }} Likes"
   part_of_series: "Dieser Artikel ist Teil einer Serie."
   part: "Teil"
   this_article: "Dieser Artikel"
   related_articles: "Verwandte Artikel"
+  reply_by_email: "Per E-Mail antworten"
+  reply_to: "Antwort auf {{ .Title }}"
+  zen_mode_title:
+    enable: "Zen-Modus aktivieren"
+    disable: "Zen-Modus deaktivieren"
+
+a11y:
+  title: "Einstellungen zur Barrierefreiheit"
+  disable_blur: "Blur deaktivieren"
+  disable_images: "Bilder deaktivieren"
+  show_link_underline: "Links unterstreichen"
+  font_size: "Schriftgröße"
 
 author:
   byline_title: "Autor"
@@ -58,9 +76,40 @@ sharing:
   pinterest: "Auf Pinterest pinnen"
   reddit: "An Reddit senden"
   twitter: "Auf Twitter teilen"
+  bluesky: "Auf Bluesky posten"
+  whatsapp: "Über WhatsApp teilen"
+  telegram: "Über Telegram teilen"
+  mastodon: "Auf Mastodon teilen"
 
 shortcode:
   recent_articles: "Neue Beiträge"
 
 recent:
   show_more: "Zeige Mehr"
+
+admonition:
+  abstract: "Kurzfassung"
+  bug: "Bug"
+  caution: "Vorsicht"
+  danger: "Gefahr"
+  example: "Beispiel"
+  failure: "Fehler"
+  important: "Wichtig"
+  info: "Info"
+  note: "Hinweis"
+  question: "Frage"
+  quote: "Zitat"
+  success: "Erfolg"
+  tip: "Tipp"
+  todo: "To-Do"
+  warning: "Warnung"
+
+cookie_notice:
+  message_with_link: "Diese Website verwendet Cookies und ähnliche Technologien. Lesen Sie unsere Datenschutzerklärung"
+  message: "Diese Website verwendet Cookies und ähnliche Technologien. Mit der Nutzung dieser Website akzeptierst du das."
+  privacy_policy: "Datenschutzerklärung"
+  button: "Verstanden"
+  image_alt: "Cookie-Symbol"
+
+kofi:
+  support_me: "Unterstütze mich"

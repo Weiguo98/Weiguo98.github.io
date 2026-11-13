@@ -3,11 +3,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "{{ (site.GetPage "/").Permalink | safeURL }}",
+    "@id": {{ site.Home.Permalink | safeURL }},
     "name": "{{ .Site.Title | safeJS }}",
     {{ with .Site.Params.description }}"description": "{{ . | safeJS }}",{{ end }}
-    {{ with .Site.LanguageCode }}"inLanguage": "{{ . }}",{{ end }}
-    "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
+    {{ with .Site.Language.Locale }}"inLanguage": "{{ . }}",{{ end }}
+    "url": {{ site.Home.Permalink | safeURL }},
     {{ with .Site.Params.keywords }}"keywords": {{ . }},{{ end }}
     "publisher" : {
       "@type": "Person",
@@ -15,8 +15,24 @@
     }
   }
   </script>
-{{ else if .IsPage }}
+{{ else }}
   {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+  {{- /* Resolve the author: first `authors` front matter key looked up in data/authors/, else the site author. */ -}}
+  {{- $author := .Site.Params.Author -}}
+  {{- with .Params.authors -}}
+    {{- with index hugo.Data.authors (index . 0 | lower) -}}
+      {{- $author = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* sameAs from social profiles: data/authors uses `social`, the site author uses `links` (each a {platform: url} map). */ -}}
+  {{- $sameAs := slice -}}
+  {{- range (or $author.social $author.links) -}}
+    {{- range $platform, $url := . -}}
+      {{- if not (strings.HasPrefix $url "mailto:") -}}
+        {{- $sameAs = $sameAs | append $url -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
@@ -25,12 +41,25 @@
     "name": "{{ .Title | safeJS }}",
     "headline": "{{ .Title | safeJS }}",
     {{ with .Description }}"description": "{{ . | safeJS }}",{{ end }}
-    {{ with .Summary }}"abstract": "{{ . | safeJS }}",{{ end }}
-    {{ with .Site.LanguageCode }}"inLanguage": "{{ . }}",{{ end }}
-    "url" : "{{ .Permalink }}",
+    {{ with .Site.Language.Locale }}"inLanguage": "{{ . }}",{{ end }}
+    "url" : {{ .Permalink }},
     "author" : {
       "@type": "Person",
-      "name": "{{ .Site.Params.Author.name | safeJS }}"
+      "name": "{{ $author.name | safeJS }}"{{ with $author.image }},
+      {{- $authorImageURL := "" }}
+      {{- if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{- $authorImageURL = . }}
+      {{- else }}
+        {{- with resources.Get . }}
+          {{- /* Publish the original so the schema URL resolves even when
+            every other reference uses optimised variants. */}}
+          {{- $authorImageURL = .Permalink }}
+        {{- else }}
+          {{- $authorImageURL = . | absURL }}
+        {{- end }}
+      {{- end }}
+      "image": {{ $authorImageURL }}{{ end }}{{ if $sameAs }},
+      "sameAs": [{{ range $i, $u := $sameAs }}{{ if $i }}, {{ end }}{{ $u }}{{ end }}]{{ end }}
     },
     {{ with .PublishDate }}"copyrightYear": "{{ .Format "2006" }}",{{ end }}
     {{ with .Date }}"dateCreated": "{{ .Format $iso8601 }}",{{ end }}
@@ -42,8 +71,33 @@
     {{ else }}
     {{ with .Params.tags }}"keywords": {{ . }},{{ end }}
     {{ end }}
-    "mainEntityOfPage": "true",
-    "wordCount": "{{ .WordCount }}"
-  }]
+    "mainEntityOfPage": {{ .Permalink }},
+    "wordCount": {{ .WordCount | int }}
+  }{{ if site.Params.enableStructuredBreadcrumbs | default false }},
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{- $position := 0 -}}
+      {{- range .Ancestors -}}
+        {{- if not .IsHome -}}
+          {{- $position = add $position 1 -}}
+          {
+            "@type": "ListItem",
+            "position": {{ $position }},
+            "name": "{{ .Title }}",
+            "item": {{ .Permalink }}
+          },
+        {{- end -}}
+      {{- end -}}
+      {{- $position = add $position 1 -}}
+      {
+        "@type": "ListItem",
+        "position": {{ $position }},
+        "name": "{{ .Title }}",
+        "item": {{ .Permalink }}
+      }
+    ]
+  }{{ end }}]
   </script>
 {{ end }}

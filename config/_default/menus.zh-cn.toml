@@ -93,11 +93,6 @@
 # the copyright notice. Configure as per the main menu above.
 
  [[footer]]
-   name = "赞助"
-   url = "https://www.buymeacoffee.com/nunocoracao"
-   weight = 10
-
- [[footer]]
    name = "作者"
    pageRef = "authors"
    weight = 20
