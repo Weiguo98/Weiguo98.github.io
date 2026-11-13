@@ -65,9 +65,10 @@ sudo ip link add link eth0 name eth0.100 type vlan id 100
 sudo ip link set dev eth0.100 up
 ```
 
-Ensure firewall and network policies allow rewritten IP/MAC traffic.
+> [!NOTE]
+> Ensure firewall and network policies allow rewritten IP/MAC traffic.
 
-2 Add a bridge between the original untagged interface(eth0) with the tagged interface(eth0.100)
+2. Add a bridge between the original untagged interface(eth0) with the tagged interface(eth0.100)
 
 ```bash
 sudo ip link add name br0 type bridge

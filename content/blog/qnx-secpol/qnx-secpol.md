@@ -22,7 +22,8 @@ First, a secpol.txt can be get it from `secpolgenerate` or simply from any produ
 
 3. Finally, run `secpolpush`. The security policy is pushed to the kernel, and it works immediately.
 
-This means, now, if you would like to start any process, you need to assign a security policy to it, otherwise it will use `init_t`  as the default security policy type.
+> [!IMPORTANT]
+> This means, now, if you would like to start any process, you need to assign a security policy to it, otherwise it will use `init_t` as the default security policy type.
 
 ## Observability
 
@@ -44,7 +45,7 @@ info: usr/sbin/sshd (pid:3325972) type ssh_privsep_t uses ability SETUID(15) as 
 
 Basic syntax explanation:
 
-```txt
+```txt {title="secpol.txt"}
 # Type means new type definition
 type ssh_privsep_t;
 
@@ -81,7 +82,10 @@ More detailed explain: <https://www.qnx.com/developers/docs/7.1/index.html#com.q
         setgid: range
     ```
 
-    In this case, the error means that there are conflicts in abilities between sshd_t and ssh_privsep_t. Double check the abilities in both contexts, and make sure they have the same range of setuid and setgid. Be careful when you try to modify the abilities.
+    In this case, the error means that there are conflicts in abilities between sshd_t and ssh_privsep_t. Double check the abilities in both contexts, and make sure they have the same range of setuid and setgid. 
+
+    > [!WARNING]
+    > Be careful when you try to modify the abilities.
 
 2. Operation is not permitted
 
@@ -95,7 +99,7 @@ More detailed explain: <https://www.qnx.com/developers/docs/7.1/index.html#com.q
 
 This is the common format for secpolmonitor.log. You can see there is an error saying that init_t lacks the iofunc/exec ability when running as non-root. Simply put iofunc/exec ability into init_t in the secpol.txt file, then recompile and push the policy. It should work.
 
-```txt
+```txt {title="secpolmonitor.log"}
 info: usr/bin/example_app (pid:xxxx) type init_t uses ability MAP_FIXED(337416937472 - 337416992071) as non-root
 info: usr/bin/example_app (pid:xxxx) type init_t uses ability MAP_FIXED(337417058792 - 337417060415) as non-root
 info: usr/bin/example_app (pid:xxxx) type init_t uses ability MAP_FIXED(337417056256 - 337417060351) as non-root

@@ -83,7 +83,7 @@ ss -uln
 
 Use the `expose` directive in your `docker-compose.yml` file:
 
-```yaml
+```yaml {title="docker-compose.yml"}
 services:
   app:
     image: your_image
@@ -95,7 +95,7 @@ services:
 
 Use the `ports` directive to map the container port to the host:
 
-```yaml
+```yaml {title="docker-compose.yml"}
 services:
   app:
     image: your_image
@@ -134,7 +134,8 @@ These rules indicate that traffic targeting container IPs is dropped unless it o
 sudo iptables -A DOCKER -j ACCEPT
 ```
 
-This command will let any traffic go into docker internal network. If you are in a public network, you could specify which interface you would like docker to accept in the command.
+> [!WARNING]
+> This command will let any traffic go into docker internal network. If you are in a public network, you could specify which interface you would like docker to accept in the command.
 
 ### 2. Check nftables Rules
 
@@ -156,7 +157,10 @@ table ip raw {
 }
 ```
 
-These rules further restrict access to container IPs from non-`localbridge` interfaces. These are automatically generated when you run `docker-compose` and there is no way to disable it. Currently, I have to use script to delete them every time.
+These rules further restrict access to container IPs from non-`localbridge` interfaces. These are automatically generated when you run `docker-compose` and there is no way to disable it. 
+
+> [!NOTE]
+> Currently, I have to use script to delete them every time.
 
 ## Key Steps to Resolve the Issue
 
@@ -172,7 +176,10 @@ Alternatively, delete specific rules based on your setup.
 
 ### Ensure Container Services Listen on `0.0.0.0:0030/udp`
 
-The service inside the container must listen on `0.0.0.0` or the specific network interface IP. Avoid using `127.0.0.1` as it restricts access to localhost.
+The service inside the container must listen on `0.0.0.0` or the specific network interface IP.
+
+> [!CAUTION]
+> Avoid using `127.0.0.1` as it restricts access to localhost.
 
 ## Tools and Installation
 

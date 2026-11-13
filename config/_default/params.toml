@@ -21,7 +21,7 @@ disableImageOptimization = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-defaultBackgroundImage = "/img/background.svg"
+defaultBackgroundImage = "/img/waves.svg"
 # defaultFeaturedImage = "/img/featured.svg"
 
 highlightCurrentMenuArea = true
@@ -40,7 +40,7 @@ smartTOCHideUnfocusedChildren = false
 
 [homepage]
   layout = "hero" # valid options: page, profile, hero, card, background, custom
-  # homepageImage = "/img/iceland.jpg" # used in: hero, and card
+  homepageImage = "/img/lavalamp.svg" # used in: hero, and card
   showRecent = true
   showRecentItems = 3
   showMoreLink = true
@@ -51,11 +51,11 @@ smartTOCHideUnfocusedChildren = false
   disableHeroImageFilter = false # only used when layout equals hero
 
 [article]
-  showDate = false
+  showDate = true
   showViews = true
   showLikes = false
   showDateOnlyInArticle = false
-  showDateUpdated = false
+  showDateUpdated = true
   showAuthor = true
   # showAuthorBottom = false
   showHero = true

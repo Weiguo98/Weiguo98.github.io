@@ -11,7 +11,7 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "文档"
+  name = "博客"
   pageRef = "blog"
   weight = 10
 
@@ -86,13 +86,14 @@
    pageRef = "tags"
    weight = 10
 
+ [[main]]
+   name = "简历"
+   url = "https://weiguo98.github.io/resume/"
+   weight = 20
+
 
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
- [[footer]]
-   name = "作者"
-   pageRef = "authors"
-   weight = 20

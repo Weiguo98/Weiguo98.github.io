@@ -8,12 +8,12 @@ title = "Wei's Home"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/blowfish_logo_transparent.png"
+  logo = "img/logo.svg"
 
 [params.author]
   name = "Wei Guo"
   email = "guow1227@gmail.com"
-  image = "img/blowfish_logo.png"
+  image = "img/avatar.jpg"
   headline = "Debugging Life One Line at a Time."
   bio = "Debugging Life One Line at a Time."
   links = [

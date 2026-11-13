@@ -1,0 +1,5 @@
+/* Theme forces SVG logos to 5rem; shrink to sit with the header text */
+.logo svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}

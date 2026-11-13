@@ -10,6 +10,7 @@ tags: ["kubernetes"]
   - The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) uses liveness probes to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.
   - The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.
   - The readiness check will continuously run in the pod lifecycle.
+    > [!TIP]
     > As long as Liveness Probe passed, the pod status changed to `running`. If you want to connect to a pod when it is ready for traffic, it is better to check the `ready` keywords.
 - Pod lifecycle [Pod Lifecycle | Kubernetes](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
   
